@@ -1,20 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Glee | Главная</title>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-    <!-- 
+<!-- 
         ---пометка для тренера---
-        1. Не стал заводить переменные для цвета, так как цвета абсолютно разные на макете и почти не повторяются, правильно или все таки стоит ?
+        1. Завел несколько переменных, но не знаю наколько правильно, в макете куча разных цветов, тяжело выделить какой-то акцентный или дефолтный
+        2. Не уверен, что правильно сверстал Блок - users-icon
      -->
 
+     <!-- Доделать переменные -->
+
 <body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a class="logo" href="#">
+                    <img class="logo__image" src="images/logo.svg" alt="логотип Glee">
+                </a>
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">
+                                Home
+                                <span class="menu__plus">+</span>
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">
+                                About
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">
+                                Service
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">
+                                Pages
+                                <span class="menu__plus">+</span>
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">
+                                News
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">
+                                Contacts
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="user-icons">
+                    <button class="user-icons__item user-icons__item--search" href="#">
+                        <span class="sr-only">Поиск</span>
+                    </button>
+                    <button class="user-icons__item user-icons__item--like" href="#">
+                        <span class="sr-only">Понравившиеся</span>
+                        <span class="user-icons__num">0</span>
+                    </button>
+                    <button class="user-icons__item user-icons__item--basket" href="#">
+                        <span class="sr-only">Корзина</span>
+                        <span class="user-icons__num user-icons__num--basket">0</span>
+                    </button>
+                    <button class="user-icons__item user-icons__item--menu" href="#">
+                        <span class="sr-only">Каталог</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
 
     <script src="js/main.min.js"></script>
 </body>
+
 </html>
