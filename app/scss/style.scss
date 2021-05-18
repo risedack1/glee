@@ -60,7 +60,7 @@
         }
 
         &:focus {
-            border: 2px solid #114e6e;
+            border: 2px solid $accent;
         }
 
         &:hover::before {
