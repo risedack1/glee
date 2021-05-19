@@ -1,11 +1,29 @@
+html,
 body {
+    height: 100%;
+}
+
+body {
+    padding: 0 70px;
     @extend %rubik-400;
     font-size: 16px;
     line-height: 1.9;
-    background-color: #ffffff;
+    background-color: $bg;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex-grow: 1;
 }
 
 .container {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.large-container {
     max-width: 1800px;
     padding: 0 15px;
     margin: 0 auto;
@@ -35,5 +53,38 @@ body {
 
     &:active {
         padding: 5px;
+    }
+}
+
+.button {
+    outline: none;
+    border: 2px solid transparent;
+    background-color: #a3bbc8;
+    color: $bg;
+    box-shadow: 0 0 transparent;
+    transition: border-color 0.3s, box-shadow 0.5s, background-color 0.3s;
+
+    &:focus {
+        border: 2px solid #436372;
+    }
+
+    &:hover {
+        box-shadow: 3px 3px 10px #a3bbc8;
+    }
+
+    &:active {
+        background-color: #436070;
+    }
+}
+
+.input {
+    outline: none;
+    transition: border-color 0.3s, opacity 0.3s;
+    &:focus {
+        border: 1px solid #436372;
+    }
+
+    &:hover::placeholder {
+        opacity: 0.7;
     }
 }
