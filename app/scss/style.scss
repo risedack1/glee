@@ -21,10 +21,15 @@
     }
 
     &__link {
+        padding: 0 1px;
         @extend %rubik-500;
         font-size: 15px;
         line-height: 1;
         color: #436372;
+
+        &--active {
+            color: $black;
+        }
     }
 }
 
