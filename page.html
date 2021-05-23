@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glee | Главная</title>
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<!-- 
+        ---пометка для тренера---
+        1. Завел несколько переменных, но не знаю наколько правильно, в макете куча разных цветов, тяжело выделить какой-то акцентный или дефолтный
+        2. Не уверен, что правильно сверстал Блок - users-icon
+     -->
+
+<body>
+    <header class="header">
+        <div class="large-container">
+            <div class="header__inner">
+                <a class="logo" href="#">
+                    <img class="logo__image" src="images/logo.svg" alt="логотип Glee">
+                </a>
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a class="menu__link link" href="#">
+                                Home
+                                <span class="menu__plus">+</span>
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link link" href="#">
+                                About
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link link" href="#">
+                                Service
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link link" href="#">
+                                Pages
+                                <span class="menu__plus">+</span>
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link link" href="#">
+                                News
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link link" href="#">
+                                Contacts
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="user-icons">
+                    <button class="user-icons__item user-icons__item--search" type="button">
+                        <span class="sr-only">Поиск</span>
+                    </button>
+                    <button class="user-icons__item user-icons__item--like" type="button">
+                        <span class="sr-only">Понравившиеся</span>
+                        <span class="user-icons__num">0</span>
+                    </button>
+                    <button class="user-icons__item user-icons__item--basket" type="button">
+                        <span class="sr-only">Корзина</span>
+                        <span class="user-icons__num user-icons__num--basket">0</span>
+                    </button>
+                    <button class="user-icons__item user-icons__item--menu" type="button">
+                        <span class="sr-only">Каталог</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <ul class="footer__top">
+                <!-- ниже усложнил классы, по другому не придумал -->
+                <li class="footer__address">
+                    <a class="logo footer__logo" href="#">
+                        <img class="logo__image" src="images/logo.svg" alt="логотип Glee">
+                    </a>
+                    <address class="footer__contacts">
+                        <span class="footer__contact">
+                            <span class="footer__caps">Address: </span>4772 Wines Lane
+                            Houston, TX 77032
+                        </span>
+                        <span class="footer__contact">
+                            <span class="footer__caps">Telephone: </span><a class="footer__phone link" href="tel:+8323475843">+832-347-5843</a>
+                        </span>
+                        <span class="footer__contact">
+                            <span class="footer__caps">Email: </span><a class="footer__email link" href="email:contact@Glee.com">contact@Glee.com</a>
+                        </span>
+                    </address>
+                </li>
+                <li class="footer__servise">
+                    <ul class="footer__list">
+                        <h2 class="footer__title">
+                            Services
+                        </h2>
+                        <li class="footer__item">
+                            <a class="footer__link link" href="#">
+                                About us
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link link" href="#">
+                                Return Policy
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link link" href="#">
+                                Our Blog
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link link" href="#">
+                                Contact Us
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link link" href="#">
+                                Terms & Condition
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="footer__account">
+                    <h2 class="footer__title">
+                        Account
+                    </h2>
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a class="footer__link link" href="#">
+                                Your Account
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link link" href="#">
+                                Checkout
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link link" href="#">
+                                Login
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link link" href="#">
+                                Register
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="footer__newsletter">
+                    <h2 class="footer__title">
+                        newsletter
+                    </h2>
+                    <p class="footer__text">
+                        Subscribe by our newsletter and get
+                        update protidin.
+                    </p>
+                    <form class="footer__form" action="#">
+                        <label>
+                            <span class="sr-only">Введите email address</span>
+                            <input class="footer__input input" type="email" name="email" placeholder="Email address" required>
+                        </label>
+                        <button class="footer__btn button" type="submit">Subscribe</button>
+                    </form>
+                </li>
+            </ul>
+            <div class="footer__bottom">
+                <p class="footer__copy">©2020 CopyRight Example. All rights reserved.</p>
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__item menu__item--footer">
+                            <a class="menu__link link" href="#">
+                                Home
+                            </a>
+                        </li>
+                        <li class="menu__item menu__item--footer">
+                            <a class="menu__link link" href="#">
+                                About
+                            </a>
+                        </li>
+                        <li class="menu__item menu__item--footer">
+                            <a class="menu__link link" href="#">
+                                Blog
+                            </a>
+                        </li>
+                        <li class="menu__item menu__item--footer">
+                            <a class="menu__link link" href="#">
+                                Contacts
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>
