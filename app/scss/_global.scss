@@ -4,13 +4,13 @@ body {
 }
 
 body {
-    padding: 0 70px;
-    @extend %rubik-400;
+    display: flex;
+    flex-direction: column;
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
     font-size: 16px;
     line-height: 1.9;
     background-color: $bg;
-    display: flex;
-    flex-direction: column;
 }
 
 .main {
@@ -18,31 +18,30 @@ body {
 }
 
 .container {
+    margin: 0 auto;
+    padding: 0 15px;
     max-width: 1200px;
-    padding: 0 15px;
-    margin: 0 auto;
-}
 
-.large-container {
-    max-width: 1800px;
-    padding: 0 15px;
-    margin: 0 auto;
+    &--lg {
+        max-width: 1800px;
+    }
 }
 
 .sr-only {
     position: absolute;
+    margin: -1px;
     width: 1px;
     height: 1px;
-    margin: -1px;
-    border: 0;
-    white-space: nowrap;
     clip-path: inset(0 0 0 0);
     overflow: hidden;
+    border: 0;
+    white-space: nowrap;
 }
 
 .link {
     outline: none;
     transition: padding 0.3s;
+
     &:focus {
         border-bottom: 2px solid $accent;
     }
@@ -59,9 +58,9 @@ body {
 .button {
     outline: none;
     border: 2px solid transparent;
-    background-color: #a3bbc8;
-    color: $bg;
     box-shadow: 0 0 transparent;
+    color: $bg;
+    background-color: #a3bbc8;
     transition: border-color 0.3s, box-shadow 0.5s, background-color 0.3s;
 
     &:focus {
@@ -80,6 +79,7 @@ body {
 .input {
     outline: none;
     transition: border-color 0.3s, opacity 0.3s;
+
     &:focus {
         border: 1px solid #436372;
     }
