@@ -458,7 +458,7 @@
 }
 
 .products {
-    padding: 70px 0 180px;
+    padding: 70px 0 0;
 
     &__container {
         max-width: 1230px;
@@ -475,6 +475,7 @@
     &__content {
         display: flex;
         flex-wrap: wrap;
+        margin-bottom: 186px;
     }
 
     &__item {
@@ -592,6 +593,125 @@
         &--active {
             color: $black;
         }
+    }
+}
+
+.products-promo {
+    &__inner {
+        display: grid;
+        grid-column-gap: 30px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__card {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 150px;
+        width: 100%;
+        min-height: 390px;
+        max-width: 870px;
+        background-color: $pink;
+    }
+
+    &__image {
+        flex-basis: 355px;
+        margin-top: -180px;
+        margin-right: 15px;
+    }
+
+    &__img {
+        margin-left: auto;
+    }
+
+    &__content {
+        color: #243f4d;
+    }
+
+    &__title {
+        margin-bottom: 33px;
+        width: 270px;
+        font-family: "DMSans", sans-serif;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 1.2;
+    }
+
+    &__text {
+        margin-bottom: 40px;
+        max-width: 330px;
+    }
+
+    &__link {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 23px 20px;
+        width: 180px;
+        border: 1px solid #b3b7b5;
+        border-radius: 5px;
+        font-weight: 500;
+        font-size: 15px;
+        color: #436372;
+        background-color: transparent;
+
+        &:active {
+            color: $bg;
+
+            path {
+                fill: $bg;
+            }
+        }
+    }
+}
+
+.design {
+    padding: 105px 120px;
+
+    &__title {
+        margin-bottom: 35px;
+    }
+
+    &__list {
+        margin-bottom: 80px;
+    }
+}
+
+.design-cards {
+    display: grid;
+    grid-gap: 35px 30px;
+    grid-template-columns: repeat(3, 1fr);
+
+    &__item {
+        height: 246px;
+        max-width: 370px;
+        background-repeat: no-repeat;
+    }
+
+    &__link {
+        display: block;
+        padding: 40px 0 0 35px;
+        width: 100%;
+        height: 100%;
+        font-family: "DMSans", sans-serif;
+        font-weight: 700;
+        transition: background-color 0.5s;
+
+        &:hover {
+            background-color: rgba(139, 139, 139, 0.3);
+        }
+    }
+
+    &__title {
+        width: 175px;
+        font-size: 20px;
+        line-height: 1;
+        color: $black;
+    }
+
+    &__type {
+        color: #a3bbc8;
     }
 }
 
