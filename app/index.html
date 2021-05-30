@@ -15,14 +15,17 @@
         1. Завел несколько переменных, но не знаю наколько правильно, в макете куча разных цветов, тяжело выделить какой-то акцентный или дефолтный
         2. Не уверен, что правильно сверстал Блок - users-icon
         3. Форма в футере, не знаю как убрать пробел после инлайнового инпута, кроме как отрицательным марджином на след элементе (на button)
-        4. Не знаю как в слайдере сделать так что бы можно было заменить картинку на другую и она нормально смотрелась, object-fit не помогает, обьясни пожалуйста как это сделать
+        4. Не знаю как в слайдере сделать так что бы можно было заменить картинку на другую и она нормально смотрелась, object-fit не помогает, обьясни пожалуйста как это сделать / в блоке products вроде сделал и все работает
+        5. Дроп даун меню в хэдере нужно делать ?
+        6. Не использовал extend для шрифтов, мне как-то проще по старинке, если надо переделаю, но быстрее у меня получается, просто шрифт прописать
+        7. Добавил stilelint в сборку
      -->
 
 <body>
     <header class="header">
         <div class="container container--lg">
             <div class="header__inner">
-                <a class="logo" href="#">
+                <a class="logo header__logo" href="#">
                     <img class="logo__image" src="images/logo.svg" alt="логотип Glee">
                 </a>
                 <nav class="menu">
@@ -92,8 +95,8 @@
                             <div class="slider-top__inner">
                                 <div class="slider-top__content">
                                     <h2 class="slider-top__title">
-                                        SMART AND
-                                        RENDY
+                                        smart and
+                                        trendy
                                     </h2>
                                     <p class="slider-top__text">
                                         Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
@@ -114,8 +117,8 @@
                             <div class="slider-top__inner">
                                 <div class="slider-top__content">
                                     <h2 class="slider-top__title">
-                                        SMART AND
-                                        RENDY
+                                        smart and
+                                        trendy
                                     </h2>
                                     <p class="slider-top__text">
                                         Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
@@ -136,8 +139,8 @@
                             <div class="slider-top__inner">
                                 <div class="slider-top__content">
                                     <h2 class="slider-top__title">
-                                        SMART AND
-                                        RENDY
+                                        smart and
+                                        trendy
                                     </h2>
                                     <p class="slider-top__text">
                                         Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
@@ -199,38 +202,39 @@
                 <h2 class="title products__title">
                     Products of the week
                 </h2>
-                <ul class="list products__list">
-                    <li class="list__item">
-                        <a class="list__link list__link--active link" href="#">
+                <ul class="mix-filter products__list">
+                    <li class="mix-filter__item">
+                        <button class="mix-filter__link mix-filter__link--active link" data-filter="all" type="button">
                             All
-                        </a>
+                        </button>
                     </li>
-                    <li class="list__item">
-                        <a class="list__link link" href="#">
+                    <li class="mix-filter__item">
+                        <button class="mix-filter__link link" data-filter=".category-a" type="button">
                             Furnitures
-                        </a>
+                        </button>
                     </li>
-                    <li class="list__item">
-                        <a class="list__link link" href="#">
+                    <li class="mix-filter__item">
+                        <button class="mix-filter__link link" data-filter=".category-b" type="button">
                             Chairs
-                        </a>
+                        </button>
                     </li>
-                    <li class="list__item">
-                        <a class="list__link link" href="#">
+                    <li class="mix-filter__item">
+                        <button class="mix-filter__link link" data-filter=".category-c" type="button">
                             Lighting
-                        </a>
+                        </button>
                     </li>
-                    <li class="list__item">
-                        <a class="list__link link" href="#">
+                    <li class="mix-filter__item">
+                        <button class="mix-filter__link link" data-filter=".category-d" type="button">
                             Decor
-                        </a>
+                        </button>
                     </li>
                 </ul>
 
                 <ul class="products__content">
-                    <li class="products__item">
+                    <li class="products__item mix category-a">
                         <div class="products__image" href="#">
-                            <img class="products__img" src="images/products/item1.png" alt="кресло">
+                            <a class="products__link" href="#"><img class="products__img"
+                                    src="images/products/item1.png" alt="рестро стол"></a>
                             <div class="products__icons">
                                 <a class="products__icon" href="#">
                                     <svg width="20px" height="20px">
@@ -253,8 +257,8 @@
                             </div>
                         </div>
                         <div class="products__text">
-                            <h3 class="products__content-title">
-                                <a class="products__link" href="#">
+                            <h3 class="products__subtitle">
+                                <a class="products__sublink link" href="#">
                                     Wooden radio
                                 </a>
                             </h3>
@@ -263,9 +267,10 @@
                             </span>
                         </div>
                     </li>
-                    <li class="products__item">
+                    <li class="products__item mix category-a">
                         <div class="products__image" href="#">
-                            <img class="products__img" src="images/products/item2.png" alt="деевянный стул">
+                            <a class="products__link" href="#"><img class="products__img"
+                                    src="images/products/item2.png" alt="рестро стол"></a>
                             <div class="products__icons">
                                 <a class="products__icon" href="#">
                                     <svg width="20px" height="20px">
@@ -288,8 +293,8 @@
                             </div>
                         </div>
                         <div class="products__text">
-                            <h3 class="products__content-title">
-                                <a class="products__link" href="#">
+                            <h3 class="products__subtitle">
+                                <a class="products__sublink link" href="#">
                                     Wooden chair
                                 </a>
                             </h3>
@@ -298,9 +303,10 @@
                             </span>
                         </div>
                     </li>
-                    <li class="products__item">
+                    <li class="products__item mix category-b">
                         <div class="products__image" href="#">
-                            <img class="products__img" src="images/products/item3.png" alt="белое кресло">
+                            <a class="products__link" href="#"><img class="products__img"
+                                    src="images/products/item3.png" alt="рестро стол"></a>
                             <div class="products__icons">
                                 <a class="products__icon" href="#">
                                     <svg width="20px" height="20px">
@@ -323,8 +329,8 @@
                             </div>
                         </div>
                         <div class="products__text">
-                            <h3 class="products__content-title">
-                                <a class="products__link" href="#">
+                            <h3 class="products__subtitle">
+                                <a class="products__sublink link" href="#">
                                     White chair
                                 </a>
                             </h3>
@@ -333,9 +339,10 @@
                             </span>
                         </div>
                     </li>
-                    <li class="products__item">
+                    <li class="products__item mix category-c">
                         <div class="products__image" href="#">
-                            <img class="products__img" src="images/products/item4.png" alt="ретро стол">
+                            <a class="products__link" href="#"><img class="products__img"
+                                    src="images/products/item4.png" alt="рестро стол"></a>
                             <div class="products__icons">
                                 <a class="products__icon" href="#">
                                     <svg width="20px" height="20px">
@@ -358,8 +365,8 @@
                             </div>
                         </div>
                         <div class="products__text">
-                            <h3 class="products__content-title">
-                                <a class="products__link" href="#">
+                            <h3 class="products__subtitle">
+                                <a class="products__sublink link" href="#">
                                     Retro table
                                 </a>
                             </h3>
@@ -368,9 +375,10 @@
                             </span>
                         </div>
                     </li>
-                    <li class="products__item">
+                    <li class="products__item mix category-b">
                         <div class="products__image" href="#">
-                            <img class="products__img" src="images/products/item5.png" alt="деревянная софа">
+                            <a class="products__link" href="#"><img class="products__img"
+                                    src="images/products/item5.png" alt="рестро стол"></a>
                             <div class="products__icons">
                                 <a class="products__icon" href="#">
                                     <svg width="20px" height="20px">
@@ -393,8 +401,8 @@
                             </div>
                         </div>
                         <div class="products__text">
-                            <h3 class="products__content-title">
-                                <a class="products__link" href="#">
+                            <h3 class="products__subtitle">
+                                <a class="products__sublink link" href="#">
                                     Wooden radio
                                 </a>
                             </h3>
@@ -403,9 +411,10 @@
                             </span>
                         </div>
                     </li>
-                    <li class="products__item">
+                    <li class="products__item mix category-b">
                         <div class="products__image" href="#">
-                            <img class="products__img" src="images/products/item6.png" alt="деревянное кресло">
+                            <a class="products__link" href="#"><img class="products__img"
+                                    src="images/products/item6.png" alt="рестро стол"></a>
                             <div class="products__icons">
                                 <a class="products__icon" href="#">
                                     <svg width="20px" height="20px">
@@ -428,8 +437,8 @@
                             </div>
                         </div>
                         <div class="products__text">
-                            <h3 class="products__content-title">
-                                <a class="products__link" href="#">
+                            <h3 class="products__subtitle">
+                                <a class="products__sublink link" href="#">
                                     Wooden chair
                                 </a>
                             </h3>
@@ -438,9 +447,10 @@
                             </span>
                         </div>
                     </li>
-                    <li class="products__item">
+                    <li class="products__item mix category-b">
                         <div class="products__image" href="#">
-                            <img class="products__img" src="images/products/item7.png" alt="белое кресло">
+                            <a class="products__link" href="#"><img class="products__img"
+                                    src="images/products/item7.png" alt="рестро стол"></a>
                             <div class="products__icons">
                                 <a class="products__icon" href="#">
                                     <svg width="20px" height="20px">
@@ -463,8 +473,8 @@
                             </div>
                         </div>
                         <div class="products__text">
-                            <h3 class="products__content-title">
-                                <a class="products__link" href="#">
+                            <h3 class="products__subtitle">
+                                <a class="products__sublink link" href="#">
                                     White chair
                                 </a>
                             </h3>
@@ -473,9 +483,10 @@
                             </span>
                         </div>
                     </li>
-                    <li class="products__item">
+                    <li class="products__item mix category-d">
                         <div class="products__image" href="#">
-                            <img class="products__img" src="images/products/item8.png" alt="рестро стол">
+                            <a class="products__link" href="#"><img class="products__img"
+                                    src="images/products/item8.png" alt="рестро стол"></a>
                             <div class="products__icons">
                                 <a class="products__icon" href="#">
                                     <svg width="20px" height="20px">
@@ -498,8 +509,8 @@
                             </div>
                         </div>
                         <div class="products__text">
-                            <h3 class="products__content-title">
-                                <a class="products__link" href="#">
+                            <h3 class="products__subtitle">
+                                <a class="products__sublink link" href="#">
                                     Retro table
                                 </a>
                             </h3>
@@ -508,12 +519,16 @@
                             </span>
                         </div>
                     </li>
+                    
                 </ul>
             </div>
         </section>
 
 
     </main>
+
+
+
 
     <footer class="footer">
         <div class="container">

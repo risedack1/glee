@@ -6,7 +6,7 @@
   "scripts": {
     "deploy": "gh-pages -d app",
     "stylelint": "stylelint \"**/*.scss\"",
-        "stylelint:fix": "stylelint \"**/*{.css,.scss}\" --fix"
+    "stylelint:fix": "stylelint \"**/*{.css,.scss}\" --fix"
   },
   "author": "Tymur Oleshkevich",
   "license": "ISC",
@@ -21,10 +21,11 @@
     "gulp-sass": "^4.1.0",
     "gulp-uglify": "^3.0.2",
     "jquery": "^3.6.0",
+    "mixitup": "^3.3.1",
     "slick-carousel": "^1.8.1",
     "stylelint": "^13.9.0",
     "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
-        "stylelint-order": "^4.1.0",
-        "stylelint-scss": "^3.18.0"
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.18.0"
   }
 }

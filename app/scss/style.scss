@@ -4,11 +4,17 @@
 @import "libs";
 @import "global";
 
-.header__inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px 0;
+.header {
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 50px 0;
+    }
+
+    &__logo {
+        margin-right: 170px;
+    }
 }
 
 .menu {
@@ -47,6 +53,10 @@
 
 .user-icons {
     display: flex;
+
+    &__item:last-child {
+        margin-right: 0;
+    }
 
     &__item {
         position: relative;
@@ -317,10 +327,11 @@
     }
 
     &__title {
-        margin-bottom: 40px;
+        margin-bottom: 22px;
         font-weight: 500;
         font-size: 70px;
         line-height: 1;
+        text-transform: uppercase;
         color: #243f4d;
     }
 
@@ -389,7 +400,7 @@
     &__item {
         display: flex;
         justify-content: center;
-        padding: 50px 20px 45px;
+        padding: 28px 20px 45px 84px;
         width: 100%;
         max-width: 600px;
         background-color: #fef7f0;
@@ -454,12 +465,11 @@
     }
 
     &__title {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
 
     &__list {
         margin-bottom: 80px;
-        margin-left: -10px;
     }
 
     &__content {
@@ -477,14 +487,29 @@
         width: 270px;
         height: 385px;
         box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
-        background-color: #f8f8f8;
     }
 
     &__image {
         position: relative;
         width: 250px;
         overflow: hidden;
-        text-align: center;
+        transition: background-color 0.5s;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 30%;
+            background-color: rgba(65, 65, 65, 0);
+            transition: background-color 0.5s;
+        }
+
+        &:hover::before {
+            background-color: rgba(65, 65, 65, 0.3);
+        }
 
         &:hover .products__icons {
             transform: translate(-50%, 0);
@@ -492,16 +517,18 @@
     }
 
     &__img {
-        display: inline-block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
     }
 
     &__icons {
         position: absolute;
         left: 50%;
-        bottom: 0;
+        bottom: 40px;
         display: flex;
         justify-content: center;
-        transform: translate(-50%, 100%);
+        transform: translate(-50%, 300%);
         transition: transform 0.5s;
     }
 
@@ -529,7 +556,7 @@
         margin-top: 40px;
     }
 
-    &__content-title {
+    &__subtitle {
         font-family: "DMSans", sans-serif;
         font-weight: 500;
         font-size: 16px;
@@ -543,21 +570,24 @@
     }
 }
 
-.list {
+.mix-filter {
     display: flex;
     align-items: center;
     justify-content: center;
 
     &__item:not(:last-child) {
-        margin-right: 30px;
+        margin-right: 20px;
     }
 
     &__link {
+        border: none;
         font-family: "DMSans", sans-serif;
         font-weight: 700;
         font-size: 16px;
         line-height: 1.1;
         color: #8b8b8b;
+        background-color: transparent;
+        cursor: pointer;
 
         &--active {
             color: $black;

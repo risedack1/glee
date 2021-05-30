@@ -4,4 +4,6 @@ $(function(){
         arrows: false,
         fade: true
     });
+
+    var mixer = mixitup('.products__content');
 });
