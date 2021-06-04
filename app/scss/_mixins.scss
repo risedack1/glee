@@ -1,0 +1,10 @@
+
+/* stylelint-disable */
+@mixin line-clamp($count) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: $count;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+}
+/* stylelint-enable */

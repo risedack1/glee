@@ -1,0 +1,98 @@
+.button {
+    position: relative;
+    display: block;
+    padding: 23px 10px 23px 26px;
+    width: 200px;
+    overflow: hidden;
+    outline: transparent;
+    border: 2px solid transparent;
+    box-shadow: 0 0 transparent;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1;
+    color: $bg;
+    background-color: #a3bbc8;
+    transition: border-color 0.3s, background-color 0.3s;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: -10%;
+        bottom: 0;
+        width: 0;
+        height: 120%;
+        background: rgba(67, 99, 114, 0.2);
+        transform: skewX(15deg);
+        transition: width 0.3s;
+    }
+
+    svg {
+        content: "";
+        position: absolute;
+        right: 17px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        path {
+            fill: $bg;
+        }
+    }
+
+    &:focus {
+        border: 2px solid #436372;
+    }
+
+    &:hover {
+        &::before {
+            left: -10%;
+            width: 120%;
+        }
+    }
+
+    &:active {
+        background-color: #436070;
+    }
+
+    &--transparentbg {
+        padding: 23px 20px;
+        width: 180px;
+        border: 1px solid #b3b7b5;
+        border-radius: 5px;
+        color: $blue70;
+        background-color: transparent;
+
+        svg {
+            path {
+                fill: $blue80;
+            }
+        }
+
+        &:active {
+            color: $bg;
+
+            path {
+                fill: $bg;
+            }
+        }
+    }
+}
+
+.link {
+    position: relative;
+    display: block;
+    outline: transparent;
+    border: 3px solid transparent;
+    transition: box-shadow 0.3s;
+
+    &:focus {
+        border-bottom: 3px solid $blue20;
+    }
+
+    &:hover {
+        box-shadow: 3px 3px 10px $blue20;
+    }
+
+    &:active {
+        color: $blue20;
+    }
+}

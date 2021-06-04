@@ -1,0 +1,125 @@
+.slider-top {
+    &__wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        .slick-dots {
+            position: absolute;
+            left: 50%;
+            bottom: 45px;
+            display: flex;
+            justify-content: center;
+            transform: translateX(-50%);
+
+            li {
+                button {
+                    width: 30px;
+                    height: 30px;
+                    outline: transparent;
+                    border: 2px solid transparent;
+                    border-radius: 50%;
+                    font-weight: 500;
+                    font-size: 10px;
+                    line-height: 1;
+                    color: $blue80;
+                    background-color: rgba(255, 255, 255, 0.3);
+                    transition: border-color 0.3s, transform 0.3s;
+
+                    &:focus {
+                        border: 2px solid $blue20;
+                    }
+
+                    &:hover {
+                        transform: scale(1.2);
+                    }
+                }
+            }
+
+            li:not(:last-child) {
+                margin-right: 12px;
+            }
+
+            .slick-active {
+                button {
+                    background-color: $bg;
+                }
+            }
+        }
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 830px;
+    }
+
+    &__item {
+        background-color: #fcd7b6;
+    }
+
+    &__content {
+        padding-left: 2px;
+        max-width: 470px;
+    }
+
+    &__title {
+        @include line-clamp (2);
+
+        margin-bottom: 22px;
+        font-weight: 500;
+        font-size: 70px;
+        line-height: 1;
+        text-transform: uppercase;
+        color: $blue80;
+    }
+
+    &__text {
+        @include line-clamp (5);
+
+        margin-bottom: 45px;
+        max-width: 370px;
+        font-size: 18px;
+        line-height: 1.6;
+        color: $blue70;
+    }
+
+    &__link {
+        position: relative;
+        display: block;
+        padding: 23px 10px 23px 26px;
+        width: 200px;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 1;
+        color: $bg;
+        background-color: #a3bbc8;
+    }
+
+    &__img {
+        position: relative;
+        max-width: 670px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: -118px;
+            top: 50%;
+            z-index: 0;
+            width: 630px;
+            height: 630px;
+            border-radius: 50%;
+            background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.02005) 0%, rgba(255, 255, 255, 1) 100%);
+            transform: translateY(-50%);
+        }
+    }
+
+    &__image {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
