@@ -11,7 +11,7 @@
 </head>
 
 <!-- 
-        1. Stilelint ругается на свойства, которые нужны для работы line-clamp (например: -webkit-box-orient), он убирает верндорные префиксы, но без них свойство не работает, в инспекторе кода эти свойства перечеркнуты, автопрефиксер ничего не дописывает, не знаю как решить эту проблему
+       
      -->
 
 <body>
@@ -19,7 +19,7 @@
         <div class="container container--lg">
             <div class="header__inner">
                 <a class="logo header__logo" href="#">
-                    <img class="logo__image" src="images/logo.svg" alt="logo Glee">
+                    <img class="logo__image" src="images/icons/logo.svg" alt="logo Glee">
                 </a>
                 <nav class="menu">
                     <ul class="menu__list">
@@ -896,7 +896,7 @@
             <div class="footer__top">
                 <div class="footer__columns">
                     <a class="logo footer__logo" href="#">
-                        <img class="logo__image" src="images/logo.svg" alt="logo Glee">
+                        <img class="logo__image" src="images/icons/logo.svg" alt="logo Glee">
                     </a>
                     <address class="footer__contacts">
                         <span class="footer__contact">
@@ -1018,6 +1018,10 @@
                 </nav>
             </div>
         </div>
+
+        <svg class="">
+            <use xlink:href="app/sprites/sprite.svg#logo"></use>
+        </svg>
 
     </footer>
 
