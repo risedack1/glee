@@ -28,5 +28,8 @@
     "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
     "stylelint-order": "^4.1.0",
     "stylelint-scss": "^3.18.0"
+  },
+  "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7"
   }
 }

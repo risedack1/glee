@@ -1,0 +1,12 @@
+.partners {
+    display: flex;
+
+    &__link {
+        display: flex;
+        height: 85px;
+    }
+
+    &__img {
+        margin: auto;
+    }
+}

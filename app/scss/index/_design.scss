@@ -10,41 +10,10 @@
     &__list {
         margin-bottom: 80px;
     }
-}
 
-.design-cards {
-    display: grid;
-    grid-gap: 35px 30px;
-    grid-template-columns: repeat(3, 1fr);
-
-    &__item {
-        height: 246px;
-        max-width: 370px;
-        background-repeat: no-repeat;
-    }
-
-    &__link {
-        display: block;
-        padding: 40px 0 0 35px;
-        width: 100%;
-        height: 100%;
-        font-family: "DMSans", sans-serif;
-        font-weight: 700;
-        transition: background-color 0.5s;
-
-        &:hover {
-            background-color: rgba(139, 139, 139, 0.3);
-        }
-    }
-
-    &__title {
-        width: 175px;
-        font-size: 20px;
-        line-height: 1;
-        color: $black90;
-    }
-
-    &__type {
-        color: $blue20;
+    &__cards {
+        display: grid;
+        grid-gap: 35px 30px;
+        grid-template-columns: repeat(3, 1fr);
     }
 }

@@ -10,6 +10,7 @@
 // index
 
 @import "index/slider-top";
+@import "index/video-popup";
 @import "index/advantages";
 @import "index/products";
 @import "index/design";
@@ -17,13 +18,18 @@
 
 // components
 
+@import "components/circle-btn";
+@import "components/partners";
+@import "components/article-card";
+@import "components/articles";
+@import "components/header";
+@import "components/footer";
 @import "components/mix-filter";
+@import "components/design-card";
+@import "components/title";
 @import "components/buttons";
 @import "components/subscribtion-form";
 @import "components/product-card";
-@import "components/circle-btn";
-@import "components/header";
-@import "components/footer";
 
 
 /* stylelint-enable */

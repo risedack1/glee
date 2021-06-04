@@ -4,6 +4,10 @@ $(function(){
         arrows: false,
         fade: true
     });
+    $('.partners').slick({
+        arrows: false,
+        slidesToShow: 5
+    });
 
     let containerEl1 = document.querySelector('.design');
     let containerEl2 = document.querySelector('.products');
