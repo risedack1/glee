@@ -4,10 +4,19 @@
         align-items: center;
         justify-content: space-between;
         padding: 50px 0;
+
+        @include r($md) {
+            flex-wrap: wrap;
+            padding: 20px 0;
+        }
     }
 
     &__logo {
         margin-right: 170px;
+
+        @include r($xl) {
+            margin-right: 0;
+        }
     }
 }
 
@@ -22,14 +31,90 @@
     }
 }
 
+.burger {
+    position: relative;
+    z-index: 3;
+    display: none;
+    width: 55px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: $blue80;
+        transition: transform 0.5s, top 0.5s, bottom 0.5s;
+    }
+
+    &::before {
+        top: 0;
+    }
+
+    &::after {
+        bottom: 0;
+    }
+
+    &__line {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        height: 3px;
+        background-color: $blue80;
+        transform: translateY(-50%);
+        transition: opacity 0.2s;
+    }
+
+    @include r($lg) {
+        display: block;
+
+        &--active {
+            &::before {
+                top: 18px;
+                transform: rotate(45deg);
+            }
+
+            &::after {
+                bottom: 18px;
+                transform: rotate(-45deg);
+            }
+
+            .burger__line {
+                opacity: 0;
+            }
+        }
+    }
+}
+
 .menu {
     &__list {
         display: flex;
         justify-content: center;
-    }
+        transition: transform 0.8s;
 
-    &__item:not(:last-child) {
-        margin-right: 35px;
+        @include r($lg) {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 2;
+            flex-direction: column;
+            padding-top: 50px;
+            overflow-y: scroll;
+            text-align: center;
+            background-color: rgba(163, 187, 200, 0.9);
+            transform: translateY(-200%);
+
+            &--active {
+                transform: translateY(0);
+            }
+        }
     }
 
     &__link {
@@ -42,9 +127,31 @@
         &--active {
             color: $black90;
         }
+
+        @include r($lg) {
+            padding: 10px 0;
+            font-size: 30px;
+        }
     }
 
     &__item {
+        &:not(:last-child) {
+            margin-right: 35px;
+
+            @include r($xl) {
+                margin-right: 15px;
+            }
+
+            @include r($lg) {
+                margin-right: 0;
+                margin-bottom: 20px;
+
+                &:first-child {
+                    margin-top: 35px;
+                }
+            }
+        }
+
         &--footer {
             padding: 0 10px;
 
@@ -58,6 +165,20 @@
                 border-right: 1px solid #436372;
             }
         }
+    }
+
+    &--footer {
+        @include r($lg) {
+            display: none;
+        }
+    }
+
+    @include r($lg) {
+        order: 1;
+    }
+
+    @include r($md) {
+        order: 0;
     }
 }
 
@@ -129,5 +250,11 @@
 
     &__num--basket {
         right: 23px;
+    }
+
+    @include r($md) {
+        justify-content: center;
+        margin-top: 20px;
+        width: 100%;
     }
 }
