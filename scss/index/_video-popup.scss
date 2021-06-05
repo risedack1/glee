@@ -1,0 +1,36 @@
+.video-popup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    background-image: url("../../images/design/video-popup.jpg");
+    background-repeat: no-repeat;
+
+    &__play {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 100px;
+        outline: transparent;
+        border: 3px solid transparent;
+        border-radius: 50%;
+        box-shadow: 0 0 0 0 rgba(163, 187, 200, 0.3);
+        background-color: $blue20;
+        transition: box-shadow 0.3s;
+
+        svg {
+            width: 22px;
+            height: 25px;
+            fill: $bg;
+        }
+
+        &:focus {
+            border: 3px solid $blue80;
+        }
+
+        &:hover {
+            box-shadow: 0 0 0 18px rgba(163, 187, 200, 0.3);
+        }
+    }
+}

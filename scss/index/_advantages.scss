@@ -1,0 +1,64 @@
+.advantages {
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        padding: 28px 20px 45px 84px;
+        width: 100%;
+        max-width: 600px;
+        background-color: #fef7f0;
+    }
+
+    &__item:not(:last-child) {
+        border-right: 1px solid rgba(36, 63, 77, 0.1);
+    }
+
+    &__content {
+        position: relative;
+        width: 100%;
+        max-width: 220px;
+        font-family: "DMSans", sans-serif;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: -30%;
+            top: 0;
+            width: 56px;
+            height: 60px;
+            background-position: center top;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        &--support::before {
+            background-image: url("../images/sprite.svg#support");
+        }
+
+        &--delivery::before {
+            top: -7px;
+            height: 70px;
+            background-image: url("../images/sprite.svg#delivery");
+        }
+
+        &--paymant::before {
+            background-image: url("../images/sprite.svg#paymant");
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 2.2;
+        color: #414141;
+    }
+
+    &__text {
+        @include line-clamp(5);
+
+        color: #585858;
+    }
+}

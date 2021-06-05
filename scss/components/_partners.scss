@@ -1,0 +1,19 @@
+.partners {
+    // position: relative;
+    // top: -190px;
+    padding: 90px;
+    background-color: #fef7f0;
+
+    &__inner {
+        display: flex;
+    }
+
+    &__link {
+        display: flex;
+        height: 85px;
+    }
+
+    &__img {
+        margin: auto;
+    }
+}

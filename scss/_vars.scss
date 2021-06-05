@@ -1,36 +1,41 @@
-$black: #191919;
-$header-accent: #fcd7b6;
-$accent: #a3bbc8;
-$footer-default: #7b7b7b;
-$footer-title: #1f2044;
-$bg: #ffffff;
+// font-family: 'DMSans', sans-serif;
+// font-family: 'Poppins', sans-serif;
+// font-family: 'Rubik', sans-serif;
 
-%rubik-400 {
-    font-family: 'Rubik-Regular', sans-serif;
-    font-weight: 400;
+// screen size
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+// blue
+$blue20: #a3bbc8;
+$blue70: #436372;
+$blue80: #243f4d;
+
+// rose
+$pink20: #feefe2;
+$pink50: #fcd7b6;
+
+// grey
+$gray50: #8b8b8b;
+$gray60: #7b7b7b;
+
+// black
+$black30: #262626;
+$black90: #191919;
+
+// other
+$bg: #fff;
+
+// fansybox error
+
+@function max($numbers...) {
+    @return m#{a}x(#{$numbers});
 }
 
-%rubik-500 {
-    font-family: 'Rubik-Medium', sans-serif;
-    font-weight: 500;
-}
-
-%poppins-700 {
-    font-family: 'Poppins-Bold', sans-serif;
-    font-weight: 700;
-}
-
-%dmsans-400 {
-    font-family: 'DMSans-Regular', sans-serif;
-    font-weight: 400;
-}
-
-%dmsans-500 {
-    font-family: 'DMSans-Regular', sans-serif;
-    font-weight: 500;
-}
-
-%dmsans-700 {
-    font-family: 'DMSans-Regular', sans-serif;
-    font-weight: 700;
+@function min($numbers...) {
+    @return m#{i}n(#{$numbers});
 }

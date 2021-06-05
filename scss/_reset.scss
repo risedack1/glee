@@ -37,8 +37,8 @@ ul {
 }
 
 img {
-    max-width: 100%;
     display: block;
+    max-width: 100%;
 }
 
 a {
@@ -51,4 +51,5 @@ button,
 textarea,
 select {
     font: inherit;
+    cursor: pointer;
 }

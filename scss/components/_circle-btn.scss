@@ -1,0 +1,37 @@
+.circle-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    outline: transparent;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    background-color: $bg;
+    transition: fill 0.3s, background-color 0.3s, border-color 0.3s;
+
+    svg {
+        width: 20px;
+        height: 20px;
+        fill: $blue80;
+        transition: transform 0.3s;
+    }
+
+    &:focus {
+        border: 2px solid $blue20;
+    }
+
+    &:hover {
+        background-color: $blue20;
+
+        svg {
+            fill: #f9fafb;
+        }
+    }
+
+    &:active {
+        .circle-btn__icon {
+            transform: scale(1.2);
+        }
+    }
+}
