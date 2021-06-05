@@ -2,6 +2,14 @@
 // font-family: 'Poppins', sans-serif;
 // font-family: 'Rubik', sans-serif;
 
+// screen size
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
 // blue
 $blue20: #a3bbc8;
 $blue70: #436372;
@@ -21,6 +29,8 @@ $black90: #191919;
 
 // other
 $bg: #fff;
+
+// fansybox error
 
 @function max($numbers...) {
     @return m#{a}x(#{$numbers});

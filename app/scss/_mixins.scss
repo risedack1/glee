@@ -8,3 +8,15 @@
     display: -webkit-box;
 }
 /* stylelint-enable */
+
+@mixin r($width) {
+    @media screen and (max-width: $width) {
+        @content;
+    }
+}
+
+@mixin h($width) {
+    @media screen and (max-height: $width) {
+        @content;
+    }
+}
