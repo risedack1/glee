@@ -26,25 +26,26 @@
             content: "";
             position: absolute;
             left: -30%;
-            top: 9px;
+            top: 0;
             width: 56px;
-            height: 50px;
+            height: 60px;
             background-position: center top;
             background-size: contain;
             background-repeat: no-repeat;
         }
 
         &--support::before {
-            width: 50px;
-            background-image: url("../images/icons/support.svg");
+            background-image: url("../images/sprite.svg#support");
         }
 
         &--delivery::before {
-            background-image: url("../images/icons/delivery.svg");
+            top: -7px;
+            height: 70px;
+            background-image: url("../images/sprite.svg#delivery");
         }
 
         &--paymant::before {
-            background-image: url("../images/icons/paymant.svg");
+            background-image: url("../images/sprite.svg#paymant");
         }
     }
 

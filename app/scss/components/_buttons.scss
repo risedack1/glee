@@ -31,11 +31,10 @@
         position: absolute;
         right: 17px;
         top: 50%;
+        width: 32px;
+        height: 10px;
+        fill: $bg;
         transform: translateY(-50%);
-
-        path {
-            fill: $bg;
-        }
     }
 
     &:focus {
@@ -62,9 +61,7 @@
         background-color: transparent;
 
         svg {
-            path {
-                fill: $blue80;
-            }
+            fill: $blue80;
         }
 
         &:active {
@@ -76,6 +73,8 @@
         }
     }
 }
+
+// link animation
 
 .link {
     position: relative;

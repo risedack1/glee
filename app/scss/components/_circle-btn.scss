@@ -11,6 +11,9 @@
     transition: fill 0.3s, background-color 0.3s, border-color 0.3s;
 
     svg {
+        width: 20px;
+        height: 20px;
+        fill: $blue80;
         transition: transform 0.3s;
     }
 
@@ -21,13 +24,13 @@
     &:hover {
         background-color: $blue20;
 
-        path {
+        svg {
             fill: #f9fafb;
         }
     }
 
     &:active {
-        svg {
+        .circle-btn__icon {
             transform: scale(1.2);
         }
     }

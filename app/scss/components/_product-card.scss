@@ -36,6 +36,10 @@
     &__icon {
         margin-right: 15px;
         box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
+
+        svg {
+            fill: $blue20;
+        }
     }
 
     &__subtitle {

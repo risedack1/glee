@@ -19,6 +19,12 @@
         background-color: $blue20;
         transition: box-shadow 0.3s;
 
+        svg {
+            width: 22px;
+            height: 25px;
+            fill: $bg;
+        }
+
         &:focus {
             border: 3px solid $blue80;
         }

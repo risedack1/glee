@@ -39,7 +39,7 @@
         }
 
         &:hover {
-            box-shadow: 0 0 5px 5px #ccdce6;
+            box-shadow: 0 0 0 5px #ccdce6;
         }
 
         &:active {
@@ -79,6 +79,12 @@
 
     &__date {
         margin-right: 30px;
+    }
+
+    &__icon {
+        margin-right: 5px;
+        width: 12px;
+        height: 12px;
     }
 
     &:hover .article-card__img {
