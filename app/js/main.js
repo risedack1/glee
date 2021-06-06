@@ -15,8 +15,44 @@ $(function(){
     });
     $('.partners__inner').slick({
         arrows: false,
-        slidesToShow: 5
+        slidesToShow: 5,
+        responsive: [
+            {
+              breakpoint: 992,
+              settings: {
+                slidesToShow: 3
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 2
+              }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                  slidesToShow: 1
+                }
+              }
+          ]
     });
+
+    $(window).scroll(function () {
+        // sticky navbar on scroll script
+        if (this.scrollY > 200) {
+          $('.header').addClass("header--sticky");
+          $('.slider-top').addClass("slider-top--sticky");
+        } else {
+          $('.header').removeClass("header--sticky");
+          $('.slider-top--sticky').removeClass("slider-top--sticky");
+        }
+      });
+
+      $(window).scroll(function () {
+        $('.menu__list').removeClass('menu__list--active')
+        $('.burger').removeClass('burger--active')
+      });
 
     let containerEl1 = document.querySelector('.design');
     let containerEl2 = document.querySelector('.products');

@@ -1,6 +1,4 @@
 .partners {
-    // position: relative;
-    // top: -190px;
     padding: 90px;
     background-color: #fef7f0;
 
@@ -15,5 +13,9 @@
 
     &__img {
         margin: auto;
+    }
+
+    @include r($sm) {
+        padding: 90px 0;
     }
 }

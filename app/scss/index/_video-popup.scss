@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: center;
     height: 500px;
+    background-size: cover;
     background-repeat: no-repeat;
 
     &__play {
@@ -31,5 +32,13 @@
         &:hover {
             box-shadow: 0 0 0 18px rgba(163, 187, 200, 0.3);
         }
+    }
+
+    @include r($md) {
+        height: 300px;
+    }
+
+    @include r($md) {
+        height: 200px;
     }
 }

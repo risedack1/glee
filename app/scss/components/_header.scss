@@ -1,9 +1,17 @@
 .header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    transition: background-color 0.3s;
+
     &__inner {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 50px 0;
+        transition: padding 0.3s;
 
         @include r($md) {
             flex-wrap: wrap;
@@ -16,6 +24,14 @@
 
         @include r($xl) {
             margin-right: 0;
+        }
+    }
+
+    &--sticky {
+        background-color: $pink50;
+
+        .header__inner {
+            padding: 20px 0;
         }
     }
 }
@@ -102,13 +118,13 @@
             left: 0;
             right: 0;
             top: 0;
-            bottom: 0;
             z-index: 2;
             flex-direction: column;
             padding-top: 50px;
+            height: 100vh;
             overflow-y: scroll;
             text-align: center;
-            background-color: rgba(163, 187, 200, 0.9);
+            background-color: rgba(252, 215, 182, 0.9);
             transform: translateY(-200%);
 
             &--active {

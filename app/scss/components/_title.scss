@@ -5,4 +5,8 @@
     line-height: 1.1;
     text-align: center;
     color: $black90;
+
+    @include r($sm) {
+        font-size: 26px;
+    }
 }

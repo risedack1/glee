@@ -139,4 +139,8 @@
             font-size: 16px;
         }
     }
+
+    @include r($lg) {
+        padding-top: 50px;
+    }
 }
