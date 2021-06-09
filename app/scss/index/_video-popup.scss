@@ -1,37 +1,43 @@
 .video-popup {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 500px;
+    background-image: url("../../images/decor/video-popup.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 
-    &__play {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    &::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
         width: 100px;
         height: 100px;
         outline: transparent;
         border: 3px solid transparent;
         border-radius: 50%;
         box-shadow: 0 0 0 0 rgba(163, 187, 200, 0.3);
+        background-image: url("../../images/sprite.svg#play");
+        background-position: center 20px;
+        background-size: 25px;
+        background-repeat: no-repeat;
         background-color: $blue20;
+        transform: translate(-50%, -50%);
         transition: box-shadow 0.3s;
-
-        svg {
-            width: 22px;
-            height: 25px;
-            fill: $bg;
-        }
 
         &:focus {
             border: 3px solid $blue80;
         }
+    }
 
-        &:hover {
-            box-shadow: 0 0 0 18px rgba(163, 187, 200, 0.3);
-        }
+    &:focus::before {
+        border: 3px solid $blue80;
+    }
+
+    &:hover::before {
+        box-shadow: 0 0 0 18px rgba(163, 187, 200, 0.3);
     }
 
     @include r($md) {

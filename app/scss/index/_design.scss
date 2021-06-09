@@ -1,10 +1,10 @@
 .design {
-    padding: 105px 10px 120px;
+    padding: 95px 10px 120px;
 
     &__title {
         @include line-clamp (2);
 
-        margin-bottom: 35px;
+        margin-bottom: 20px;
     }
 
     &__list {

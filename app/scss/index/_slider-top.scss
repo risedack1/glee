@@ -85,7 +85,7 @@
     }
 
     &__content {
-        padding-left: 2px;
+        padding-bottom: 60px;
         max-width: 470px;
 
         @include r($md) {
@@ -94,7 +94,7 @@
     }
 
     &__title {
-        @include line-clamp (2);
+        @include line-clamp (3);
 
         margin-bottom: 22px;
         font-weight: 500;
@@ -115,7 +115,7 @@
     &__text {
         @include line-clamp (5);
 
-        margin-bottom: 45px;
+        margin-bottom: 35px;
         max-width: 370px;
         font-size: 18px;
         line-height: 1.6;
@@ -141,8 +141,9 @@
         }
     }
 
-    &__img {
+    &__box {
         position: relative;
+        height: 600px;
         max-width: 670px;
 
         &::after {

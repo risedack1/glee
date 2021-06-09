@@ -37,3 +37,16 @@ body {
     border: 0;
     white-space: nowrap;
 }
+
+.title {
+    font-family: "DMSans", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.1;
+    text-align: center;
+    color: $black90;
+
+    @include r($sm) {
+        font-size: 26px;
+    }
+}

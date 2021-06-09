@@ -52,7 +52,7 @@
         background-color: #436070;
     }
 
-    &--transparentbg {
+    &--transparent {
         padding: 23px 20px;
         width: 180px;
         border: 1px solid #b3b7b5;
@@ -71,27 +71,5 @@
                 fill: $bg;
             }
         }
-    }
-}
-
-// link animation
-
-.link {
-    position: relative;
-    display: block;
-    outline: transparent;
-    border: 3px solid transparent;
-    transition: box-shadow 0.3s;
-
-    &:focus {
-        border-bottom: 3px solid $blue20;
-    }
-
-    &:hover {
-        box-shadow: 3px 3px 10px $blue20;
-    }
-
-    &:active {
-        color: $blue20;
     }
 }

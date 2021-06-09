@@ -1,5 +1,5 @@
 .products {
-    padding: 70px 0 0;
+    padding: 60px 0 0;
 
     &__title {
         margin-bottom: 20px;
@@ -43,71 +43,5 @@
         @include r($md) {
             grid-row-gap: 50px;
         }
-    }
-
-    &__card {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding-right: 150px;
-        width: 100%;
-        min-height: 390px;
-        max-width: 870px;
-        background-color: $pink20;
-
-        @include r($md) {
-            justify-content: center;
-            padding-right: 0;
-            text-align: center;
-        }
-
-        @include r($sm) {
-            padding: 0 5px;
-        }
-    }
-
-    &__link {
-        margin: 0 auto;
-        text-align: justify;
-    }
-
-    &__image {
-        flex-basis: 355px;
-        margin-top: -180px;
-        margin-right: 15px;
-
-        @include r($md) {
-            display: none;
-        }
-    }
-
-    &__img {
-        margin-left: auto;
-    }
-
-    &__content {
-        color: $blue80;
-    }
-
-    &__title {
-        @include line-clamp (2);
-
-        margin-bottom: 33px;
-        width: 270px;
-        font-family: "DMSans", sans-serif;
-        font-weight: 700;
-        font-size: 26px;
-        line-height: 1.2;
-
-        @include r($md) {
-            margin: 0 auto 33px;
-        }
-    }
-
-    &__text {
-        @include line-clamp (2);
-
-        margin-bottom: 40px;
-        max-width: 330px;
     }
 }

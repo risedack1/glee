@@ -1,0 +1,64 @@
+.promo-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 150px;
+    width: 100%;
+    min-height: 390px;
+    max-width: 870px;
+    background-color: $pink20;
+
+    &__link {
+        text-align: justify;
+    }
+
+    &__box {
+        flex-basis: 355px;
+        margin-top: -180px;
+        margin-right: 15px;
+
+        @include r($md) {
+            display: none;
+        }
+    }
+
+    &__img {
+        margin-left: auto;
+    }
+
+    &__content {
+        color: $blue80;
+    }
+
+    &__title {
+        @include line-clamp (2);
+
+        margin-bottom: 33px;
+        width: 270px;
+        font-family: "DMSans", sans-serif;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 1.2;
+
+        @include r($md) {
+            margin: 0 auto 33px;
+        }
+    }
+
+    &__text {
+        @include line-clamp (3);
+
+        margin-bottom: 40px;
+        max-width: 330px;
+    }
+
+    @include r($md) {
+        justify-content: center;
+        padding-right: 0;
+        text-align: center;
+    }
+
+    @include r($sm) {
+        padding: 0 5px;
+    }
+}

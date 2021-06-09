@@ -1,21 +1,31 @@
 .footer {
-    padding-top: 90px;
+    padding-top: 43px;
 
     &__top {
         display: flex;
-        flex-wrap: wrap;
         justify-content: space-between;
         padding: 30px 0;
         border-bottom: 1px solid #dae4e9;
+
+        @include r($lg) {
+            flex-wrap: wrap;
+        }
 
         @include r($sm) {
             justify-content: flex-start;
         }
     }
 
-    &__columns {
+    // в прошлый раз ты ругал пиксель в футере, поэтому я сделал для первого элемента margin top -20 px,
+    // так как по пикселю он выше остальных
+
+    &__column {
         flex-basis: 300px;
         padding: 0 5px;
+
+        &:first-child {
+            margin-top: -20px;
+        }
 
         @include r($lg) {
             flex-basis: auto;
@@ -45,7 +55,8 @@
     }
 
     &__contact {
-        display: block;
+        @include line-clamp(3);
+
         margin-bottom: 10px;
     }
 
@@ -106,6 +117,10 @@
         }
     }
 
+    &__link {
+        @include line-clamp(1);
+    }
+
     &__item {
         line-height: 1.4;
         color: $gray60;
@@ -116,6 +131,8 @@
     }
 
     &__text {
+        @include line-clamp(3);
+
         margin-bottom: 30px;
         width: 240px;
         font-size: 14px;
@@ -127,10 +144,13 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 18px 0;
+        padding: 40px 0;
     }
 
     &__copy {
+        @include line-clamp(3);
+
+        max-width: 400px;
         font-size: 14px;
         color: $gray60;
 
