@@ -40,13 +40,21 @@ $(function(){
 
     $(window).scroll(function () {
         // sticky navbar on scroll script
-        if (this.scrollY > 200) {
+        if (this.scrollY >50) {
           $('.header').addClass("header--sticky");
           $('.slider-top').addClass("slider-top--sticky");
         } else {
           $('.header').removeClass("header--sticky");
           $('.slider-top--sticky').removeClass("slider-top--sticky");
         }
+        var scrolled = $(window).scrollTop();
+ 
+	      if ( scrolled > 100 && scrolled > scrollPrev ) {
+		      $('.header').addClass('header--visible');
+	      } else {
+		      $('.header').removeClass('header--visible');
+	      }
+	      scrollPrev = scrolled;
       });
 
       $(window).scroll(function () {

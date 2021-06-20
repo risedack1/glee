@@ -1,0 +1,106 @@
+<section class="products">
+
+    <div class="container">
+        <h2 class="title products__title">
+            Products of the week
+        </h2>
+        @@include('../filters/_mix-filter.html', {
+        "element": "products",
+        "all": "all",
+        "filter-1": ".furnitures",
+        "filter-2": ".chairs",
+        "filter-3": ".lighting",
+        "filter-4": ".decor"
+        })
+
+        <ul class="products__content">
+            <li class="products__item mix furnitures">
+                @@include('../cards/_product-card.html', {
+                "number": "1",
+                "title": "Wooden radio",
+                "cost": "39"
+                })
+            </li>
+
+            <li class="products__item mix chairs">
+                @@include('../cards/_product-card.html', {
+                "number": "2",
+                "title": "Wooden radio",
+                "cost": "29"
+                })
+            </li>
+
+            <li class="products__item mix furnitures">
+                @@include('../cards/_product-card.html', {
+                "number": "3",
+                "title": "Wooden radio",
+                "cost": "29"
+                })
+            </li>
+
+            <li class="products__item mix furnitures">
+                @@include('../cards/_product-card.html', {
+                "number": "4",
+                "title": "Wooden radio",
+                "cost": "29"
+                })
+            </li>
+
+            <li class="products__item mix chairs">
+                @@include('../cards/_product-card.html', {
+                "number": "5",
+                "title": "Wooden radio",
+                "cost": "29"
+                })
+            </li>
+
+            <li class="products__item mix lighting">
+                @@include('../cards/_product-card.html', {
+                "number": "6",
+                "title": "Wooden radio",
+                "cost": "29"
+                })
+            </li>
+
+            <li class="products__item mix lighting">
+                @@include('../cards/_product-card.html', {
+                "number": "7",
+                "title": "Wooden radio",
+                "cost": "29"
+                })
+            </li>
+
+            <li class="products__item mix decor">
+                @@include('../cards/_product-card.html', {
+                "number": "8",
+                "title": "Wooden radio",
+                "cost": "29"
+                })
+            </li>
+        </ul>
+    </div>
+
+    <div class="products-promo">
+        <div class="container container--lg">
+            <ul class="products-promo__inner">
+
+                <li class="products-promo__item">
+                    @@include('../cards/_promo-card.html', {
+                    "number": "1",
+                    "title": "Mirum Notare Tellus",
+                    "promo-name": "LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight",
+                    })
+                </li>
+
+                <li class="products-promo__item">
+                    @@include('../cards/_promo-card.html', {
+                    "number": "2",
+                    "title": "Malesuada Tempor Euismod",
+                    "promo-name": "50W 8000lm Compact Size for HID StreetLightReplacementLEDCornLight",
+                    })
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</section>

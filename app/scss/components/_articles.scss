@@ -47,7 +47,10 @@
     }
 
     &__item {
-        margin: 0 15px;
+        margin: 0 15px 10px;
+        overflow: hidden;
+        border-radius: 5px;
+        box-shadow: 0 0 28px -8px $blue70;
     }
 
     @include r($lg) {

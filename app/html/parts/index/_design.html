@@ -1,0 +1,67 @@
+<section class="design">
+    <div class="container">
+        <h2 class="title design__title">
+            New Design
+        </h2>
+        
+        @@include('../filters/_mix-filter.html', {
+            "element": "design",
+            "all": "all",
+            "filter-1": ".design-a",
+            "filter-2": ".design-b",
+            "filter-3": ".design-c",
+            "filter-4": ".design-d"
+            })
+
+        <ul class="design__cards">
+            <li class="design__item mix design-a">
+                @@include('../cards/_design-card.html', {
+                    "title": "Beat Flat Pendant Black",
+                    "type": "Classic",
+                    "number": "1"
+                    })
+            </li>
+
+            <li class="design__item mix design-b">
+                @@include('../cards/_design-card.html', {
+                    "title": "Lampe Sur Pieds Bamboo",
+                    "type": "Classic",
+                    "number": "2"
+                    })
+            </li>
+
+            <li class="design__item mix design-c">
+                @@include('../cards/_design-card.html', {
+                    "title": "Rattan Rocking Chair",
+                    "type": "Classic",
+                    "number": "3"
+                    })
+            </li>
+
+            <li class="design__item mix design-d">
+                @@include('../cards/_design-card.html', {
+                    "title": "Rattan Rocking Chair",
+                    "type": "Classic",
+                    "number": "4"
+                    })
+            </li>
+
+            <li class="design__item mix design-a">
+                @@include('../cards/_design-card.html', {
+                    "title": "Rattan Rocking Chair",
+                    "type": "Classic",
+                    "number": "5"
+                    })
+            </li>
+
+            <li class="design__item mix design-b">
+                @@include('../cards/_design-card.html', {
+                    "title": "Lampe Sur Pieds Bamboo",
+                    "type": "Classic",
+                    "number": "6"
+                    })
+            </li>
+
+        </ul>
+    </div>
+</section>

@@ -6,7 +6,7 @@
         display: flex;
         flex-direction: column;
 
-        .slick-dots {
+        ul.slick-dots {
             position: absolute;
             left: 50%;
             bottom: 45px;
@@ -78,6 +78,11 @@
         @include h($sm) {
             padding: 15px 0;
         }
+
+        @include r($sm) {
+            flex-direction: column;
+            padding: 60px 0;
+        }
     }
 
     &__item {
@@ -88,8 +93,8 @@
         padding-bottom: 60px;
         max-width: 470px;
 
-        @include r($md) {
-            text-align: center;
+        @include r($sm) {
+            padding-bottom: 30px;
         }
     }
 
@@ -126,7 +131,7 @@
         }
 
         @include r($md) {
-            margin: 0 auto 45px;
+            margin: 0 0 45px;
         }
 
         @include r($xsm) {
@@ -134,16 +139,9 @@
         }
     }
 
-    &__link {
-        @include r($md) {
-            margin: 0 auto;
-            text-align: justify;
-        }
-    }
-
     &__box {
         position: relative;
-        height: 600px;
+        height: 400px;
         max-width: 670px;
 
         &::after {
@@ -162,10 +160,14 @@
                 width: 530px;
                 height: 530px;
             }
+
+            @include r($sm) {
+                display: none;
+            }
         }
 
-        @include r($md) {
-            display: none;
+        @include r($sm) {
+            height: 100%;
         }
     }
 

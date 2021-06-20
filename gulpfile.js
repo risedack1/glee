@@ -10,15 +10,15 @@ const del = require('del');
 const svgSprite = require('gulp-svg-sprite');
 const fileInclude = require('gulp-file-include');
 
-// function htmlInclude() {
-//     return src('app/html/*.html')
-//     .pipe(fileInclude({
-//         prefix: '@@',
-//         basepath: '@file'
-//       }))
-//     .pipe(dest('app/test'))
-//     .pipe(browserSync.stream());
-// }
+function htmlInclude() {
+    return src('app/html/*.html')
+    .pipe(fileInclude({
+        prefix: '@@',
+        basepath: '@file'
+      }))
+    .pipe(dest('app/'))
+    .pipe(browserSync.stream());
+}
 
 function svgSprites() {
     return src('app/images/icons/**/*.svg')
@@ -101,7 +101,7 @@ function watching() {
     watch(['app/js/**/*.js', "!app/js/main.min.js"], scripts);
     watch(['app/*.html']).on('change', browserSync.reload);
     watch('app/images/icons/**.svg', svgSprites);
-    // watch('app/html/*.html', htmlInclude);
+    watch('app/html/**/*.html', htmlInclude);
 }
 
 
@@ -113,4 +113,4 @@ exports.images = images;
 exports.cleanDist = cleanDist;
 exports.build = series(cleanDist, images, build);
 
-exports.default = parallel(styles, scripts, browsersync, svgSprites, watching);
+exports.default = parallel(styles, scripts, htmlInclude, browsersync, svgSprites, watching);
