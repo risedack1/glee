@@ -1,13 +1,48 @@
 .header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    transition: background-color 0.3s, transform 0.3s;
+
     &__inner {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 50px 0;
+        transition: padding 0.3s;
+
+        @include r($md) {
+            flex-wrap: wrap;
+            padding: 20px 0;
+        }
     }
 
     &__logo {
         margin-right: 170px;
+
+        @include r($xl) {
+            margin-right: 0;
+        }
+    }
+
+    &--sticky {
+        background-color: $pink50;
+
+        .header__inner {
+            padding: 20px 0;
+        }
+
+        @include r($md) {
+            transform: translateY(0);
+        }
+    }
+
+    &--visible {
+        @include r($md) {
+            transform: translateY(-100%);
+        }
     }
 }
 
@@ -22,14 +57,104 @@
     }
 }
 
+.burger {
+    position: relative;
+    left: 0;
+    z-index: 3;
+    display: none;
+    width: 55px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    transition: left 0.8s;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: $blue80;
+        transition: transform 0.5s, top 0.5s, bottom 0.5s;
+    }
+
+    &::before {
+        top: 0;
+    }
+
+    &::after {
+        bottom: 0;
+    }
+
+    &__line {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        height: 3px;
+        background-color: $blue80;
+        transform: translateY(-50%);
+        transition: opacity 0.2s;
+    }
+
+    @include r($lg) {
+        display: block;
+
+        &--active {
+            left: 50%;
+
+            &::before {
+                top: 18px;
+                transform: rotate(45deg);
+            }
+
+            &::after {
+                bottom: 18px;
+                transform: rotate(-45deg);
+            }
+
+            .burger__line {
+                opacity: 0;
+            }
+        }
+    }
+
+    @include r($md) {
+        display: block;
+
+        &--active {
+            left: 0;
+        }
+    }
+}
+
 .menu {
+    display: contents;
+
     &__list {
         display: flex;
         justify-content: center;
-    }
+        transition: transform 0.8s;
 
-    &__item:not(:last-child) {
-        margin-right: 35px;
+        @include r($lg) {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            z-index: 2;
+            flex-direction: column;
+            padding-top: 50px;
+            height: 100vh;
+            overflow-y: scroll;
+            text-align: center;
+            background-color: rgba(252, 215, 182, 0.9);
+            transform: translateY(-200%);
+
+            &--active {
+                transform: translateY(0);
+            }
+        }
     }
 
     &__link {
@@ -42,22 +167,67 @@
         &--active {
             color: $black90;
         }
+
+        @include r($lg) {
+            display: block;
+            padding: 10px 0;
+            font-size: 30px;
+        }
     }
 
     &__item {
+        &:not(:last-child) {
+            margin-right: 35px;
+
+            @include r($xl) {
+                margin-right: 15px;
+            }
+
+            @include r($lg) {
+                margin-right: 0;
+                margin-bottom: 20px;
+
+                &:first-child {
+                    margin-top: 35px;
+                }
+            }
+        }
+
         &--footer {
             padding: 0 10px;
 
-            a {
+            .menu__link {
                 font-weight: 400;
                 font-size: 14px;
+
+                @include r($md) {
+                    font-size: 16px;
+                }
             }
 
             &:not(:last-child) {
                 margin: 0;
                 border-right: 1px solid #436372;
             }
+
+            &:last-child {
+                padding-right: 0;
+            }
         }
+    }
+
+    &--footer {
+        @include r($lg) {
+            display: none;
+        }
+    }
+
+    @include r($lg) {
+        order: 1;
+    }
+
+    @include r($md) {
+        order: 0;
     }
 }
 
@@ -108,19 +278,17 @@
         }
     }
 
-    // здесь line-height оставил в px поскольку за счет него центрирую цифру по вертикали
-
     &__num {
         position: absolute;
         right: 23px;
         top: 8px;
-        width: 16px;
         height: 16px;
+        min-width: 16px;
         border-radius: 50%;
         font-family: "DMSans", sans-serif;
         font-weight: 400;
         font-size: 10px;
-        line-height: 18px;
+        line-height: 1.8;
         text-align: center;
         color: $blue80;
         background-color: $bg;
@@ -129,5 +297,11 @@
 
     &__num--basket {
         right: 23px;
+    }
+
+    @include r($md) {
+        justify-content: center;
+        margin-top: 20px;
+        width: 100%;
     }
 }

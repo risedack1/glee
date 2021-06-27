@@ -19,4 +19,8 @@
     .mixitup-control-active {
         color: $black90;
     }
+
+    @include r($sm) {
+        flex-wrap: wrap;
+    }
 }

@@ -1,10 +1,12 @@
 .slider-top {
+    padding-top: 145px;
+
     &__wrapper {
         position: relative;
         display: flex;
         flex-direction: column;
 
-        .slick-dots {
+        ul.slick-dots {
             position: absolute;
             left: 50%;
             bottom: 45px;
@@ -45,6 +47,17 @@
                     background-color: $bg;
                 }
             }
+
+            // здесь написал одну по высоте индивидуально,
+            // так как по высоте отображается не корректно если брать ближайшую переменную
+
+            @include h(560px) {
+                display: none;
+            }
+
+            @include r($xsm) {
+                bottom: 30px;
+            }
         }
     }
 
@@ -53,6 +66,23 @@
         align-items: center;
         justify-content: space-between;
         min-height: 830px;
+
+        @include r($xl) {
+            min-height: calc(100vh - 145px);
+        }
+
+        @include r($md) {
+            justify-content: center;
+        }
+
+        @include h($sm) {
+            padding: 15px 0;
+        }
+
+        @include r($sm) {
+            flex-direction: column;
+            padding: 60px 0;
+        }
     }
 
     &__item {
@@ -60,12 +90,16 @@
     }
 
     &__content {
-        padding-left: 2px;
+        padding-bottom: 60px;
         max-width: 470px;
+
+        @include r($sm) {
+            padding-bottom: 30px;
+        }
     }
 
     &__title {
-        @include line-clamp (2);
+        @include line-clamp (3);
 
         margin-bottom: 22px;
         font-weight: 500;
@@ -73,32 +107,41 @@
         line-height: 1;
         text-transform: uppercase;
         color: $blue80;
+
+        @include r($lg) {
+            font-size: 50px;
+        }
+
+        @include r($xsm) {
+            font-size: 40px;
+        }
     }
 
     &__text {
         @include line-clamp (5);
 
-        margin-bottom: 45px;
+        margin-bottom: 35px;
         max-width: 370px;
         font-size: 18px;
         line-height: 1.6;
         color: $blue70;
+
+        @include r($lg) {
+            font-size: 16px;
+        }
+
+        @include r($md) {
+            margin: 0 0 45px;
+        }
+
+        @include r($xsm) {
+            margin-bottom: 30px;
+        }
     }
 
-    &__link {
+    &__box {
         position: relative;
-        display: block;
-        padding: 23px 10px 23px 26px;
-        width: 200px;
-        font-weight: 500;
-        font-size: 15px;
-        line-height: 1;
-        color: $bg;
-        background-color: #a3bbc8;
-    }
-
-    &__img {
-        position: relative;
+        height: 400px;
         max-width: 670px;
 
         &::after {
@@ -112,6 +155,19 @@
             border-radius: 50%;
             background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.02005) 0%, rgba(255, 255, 255, 1) 100%);
             transform: translateY(-50%);
+
+            @include r($lg) {
+                width: 530px;
+                height: 530px;
+            }
+
+            @include r($sm) {
+                display: none;
+            }
+        }
+
+        @include r($sm) {
+            height: 100%;
         }
     }
 

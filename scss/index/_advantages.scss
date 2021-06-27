@@ -1,6 +1,11 @@
 .advantages {
     &__list {
         display: flex;
+
+        @include r($lg) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
     }
 
     &__item {
@@ -10,10 +15,42 @@
         width: 100%;
         max-width: 600px;
         background-color: #fef7f0;
-    }
 
-    &__item:not(:last-child) {
-        border-right: 1px solid rgba(36, 63, 77, 0.1);
+        &:not(:last-child) {
+            border-right: 1px solid rgba(36, 63, 77, 0.1);
+        }
+
+        @include r($lg) {
+            flex-basis: 50%;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid rgba(36, 63, 77, 0.1);
+            }
+
+            &:last-child {
+                flex-basis: 100%;
+                max-width: 100%;
+            }
+
+            &:nth-child(even) {
+                border-right: 0;
+            }
+        }
+
+        @include r($md) {
+            flex-basis: 100%;
+            max-width: 100%;
+            border-right: none;
+            border-bottom: 1px solid rgba(36, 63, 77, 0.1);
+
+            &:not(:last-child) {
+                border-right: none;
+            }
+        }
+
+        @include r($xsm) {
+            padding-left: 30px;
+        }
     }
 
     &__content {
@@ -32,6 +69,13 @@
             background-position: center top;
             background-size: contain;
             background-repeat: no-repeat;
+
+            @include r($xsm) {
+                left: auto;
+                right: 0;
+                top: auto;
+                bottom: -32px;
+            }
         }
 
         &--support::before {
@@ -39,8 +83,6 @@
         }
 
         &--delivery::before {
-            top: -7px;
-            height: 70px;
             background-image: url("../images/sprite.svg#delivery");
         }
 
@@ -50,6 +92,8 @@
     }
 
     &__title {
+        @include line-clamp(2);
+
         font-weight: 700;
         font-size: 18px;
         line-height: 2.2;
@@ -57,8 +101,17 @@
     }
 
     &__text {
-        @include line-clamp(5);
+        @include line-clamp(3);
 
         color: #585858;
+    }
+
+    @include r($lg) {
+        flex-basis: 50%;
+    }
+
+    @include r($md) {
+        flex-basis: auto;
+        padding: 28px 20px;
     }
 }

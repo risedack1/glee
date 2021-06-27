@@ -1,6 +1,4 @@
 .partners {
-    // position: relative;
-    // top: -190px;
     padding: 90px;
     background-color: #fef7f0;
 
@@ -8,12 +6,19 @@
         display: flex;
     }
 
-    &__link {
+    &__item {
         display: flex;
+        flex-direction: column-reverse;
         height: 85px;
     }
 
     &__img {
         margin: auto;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    @include r($sm) {
+        padding: 90px 0;
     }
 }

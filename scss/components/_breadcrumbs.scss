@@ -1,0 +1,35 @@
+.breadcrumbs {
+    margin-top: 145px;
+    padding: 30px 0;
+    text-align: center;
+    background-color: #edf1f4;
+
+    &__title {
+        margin-bottom: 15px;
+        font-family: "Rubik", sans-serif;
+        font-weight: 300;
+        color: $blue90;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    &__item {
+        position: relative;
+        font-size: 14px;
+        line-height: 1.7;
+        color: $blue90;
+
+        &:not(:last-child) {
+            color: rgba(34, 41, 51, 0.6);
+
+            &::after {
+                content: "/";
+                padding: 0 7px 0 5px;
+            }
+        }
+    }
+}

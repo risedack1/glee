@@ -1,5 +1,5 @@
 .articles {
-    padding: 120px 0 0;
+    padding: 108px 0 0;
     background-image:
         linear-gradient(
             180deg,
@@ -30,15 +30,31 @@
             font-size: 22px;
             transform: translateY(-50%);
         }
+
+        @include r($xl) {
+            padding-right: 10px;
+        }
     }
 
     &__inner {
         display: flex;
         flex-wrap: wrap;
         margin: 0 -15px;
+
+        @include r($xl) {
+            justify-content: center;
+        }
     }
 
     &__item {
-        margin: 0 15px;
+        margin: 0 15px 10px;
+        overflow: hidden;
+        border-radius: 5px;
+        box-shadow: 0 0 28px -8px $blue70;
+    }
+
+    @include r($lg) {
+        padding: 50px 0 0;
+        background-image: none;
     }
 }

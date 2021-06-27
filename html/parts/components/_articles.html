@@ -1,0 +1,42 @@
+<section class="articles">
+    <div class="container">
+        <div class="articles__header">
+            <h2 class="title articles__title">
+                Our Insights & Articles
+            </h2>
+            <a class="articles__all link" href="#">
+                View All
+            </a>
+        </div>
+        <ul class="articles__inner">
+            <li class="articles__item">
+                @@include('../cards/_articles-card.html', {
+                    "number": "1",
+                    "link": "Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+                    "datetime": "2020-01-28",
+                    "data": "28 january, 2020",
+                    "author": "by admin"
+                })
+            </li>
+            <li class="articles__item">
+                @@include('../cards/_articles-card.html', {
+                    "number": "2",
+                    "link": "Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+                    "datetime": "2020-01-28",
+                    "data": "28 january, 2020",
+                    "author": "by admin"
+                })
+            </li>
+            <li class="articles__item">
+                @@include('../cards/_articles-card.html', {
+                    "number": "3",
+                    "link": "Rncididunt ut labore et dolore magna aliqua. Ut enim",
+                    "datetime": "2020-01-28",
+                    "data": "28 january, 2020",
+                    "author": "by admin"
+                })
+            </li>
+        </ul>
+
+    </div>
+</section>

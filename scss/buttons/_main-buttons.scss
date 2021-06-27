@@ -1,8 +1,7 @@
 .button {
     position: relative;
-    display: block;
-    padding: 23px 10px 23px 26px;
-    width: 200px;
+    display: inline-block;
+    padding: 23px 100px 23px 26px;
     overflow: hidden;
     outline: transparent;
     border: 2px solid transparent;
@@ -52,9 +51,8 @@
         background-color: #436070;
     }
 
-    &--transparentbg {
-        padding: 23px 20px;
-        width: 180px;
+    &--transparent {
+        padding: 23px 80px 23px 26px;
         border: 1px solid #b3b7b5;
         border-radius: 5px;
         color: $blue70;
@@ -71,27 +69,5 @@
                 fill: $bg;
             }
         }
-    }
-}
-
-// link animation
-
-.link {
-    position: relative;
-    display: block;
-    outline: transparent;
-    border: 3px solid transparent;
-    transition: box-shadow 0.3s;
-
-    &:focus {
-        border-bottom: 3px solid $blue20;
-    }
-
-    &:hover {
-        box-shadow: 3px 3px 10px $blue20;
-    }
-
-    &:active {
-        color: $blue20;
     }
 }
