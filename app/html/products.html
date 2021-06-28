@@ -9,7 +9,17 @@
        @@include('./parts/components/_breadcrumbs.html',{
            "title": "Product list 1",
            "active-page": "Product list 1"
-       }) 
+       })
+       <section class="shop">
+            <div class="container">
+                <div class="shop__inner">
+                    @@include('./parts/filters/_filter-shop.html')
+                    <div class="shop__content products-shop">
+
+                    </div>
+                </div>
+            </div>
+       </section>
     </main>
 
     @@include('./parts/components/_footer.html')
