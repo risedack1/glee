@@ -1,4 +1,20 @@
 $(function () {
+  $('.shop__btn--list').on('click', function () { 
+    $('.product-shop__content').addClass('product-shop__content--active')
+    $('.shop__btn--list').addClass('shop__btn--active')
+    $('.shop__btn--grid').removeClass('shop__btn--active')
+    $('.product-card').addClass('product-card--active')
+    $('.product-shop__pagination').addClass('product-shop__pagination--active')
+  });
+
+  $('.shop__btn--grid').on('click', function () {
+    $('.product-shop__content').removeClass('product-shop__content--active')
+    $('.shop__btn--grid').addClass('shop__btn--active')
+    $('.shop__btn--list').removeClass('shop__btn--active')
+    $('.product-card').removeClass('product-card--active')
+    $('.product-shop__pagination').removeClass('product-shop__pagination--active')
+  });
+
   $('.burger').on('click', function () {
     $('.menu__list').toggleClass('menu__list--active')
     $('.burger').toggleClass('burger--active')
@@ -25,6 +41,11 @@ $(function () {
       $('.price__from').text(data.from);
       $('.price__to').text(data.to);
     },
+  });
+
+  $(".star").rateYo({
+    rating: 4,
+    spacing: "8px"
   });
 
   $('.partners__inner').slick({

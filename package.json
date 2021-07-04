@@ -25,6 +25,7 @@
     "ion-rangeslider": "^2.3.1",
     "jquery": "^3.6.0",
     "mixitup": "^3.3.1",
+    "rateyo": "^2.3.2",
     "slick-carousel": "^1.8.1",
     "stylelint": "^13.9.0",
     "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
