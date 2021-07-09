@@ -52,7 +52,10 @@
 
     &__cost {
         display: block;
+        font-family: "DMSans", sans-serif;
+        font-weight: 700;
         text-align: center;
+        color: $blue20;
     }
 
     &:hover .product-card__list {
@@ -61,6 +64,7 @@
 
     &--active {
         flex-direction: row;
+        align-items: flex-start;
         padding: 0;
         width: 100%;
         height: 500px;
@@ -71,6 +75,15 @@
             display: none;
         }
 
+        .product-card__content {
+            display: block;
+            padding: 80px 0;
+
+            @include r($md) {
+                padding: 10px 0;
+            }
+        }
+
         .list-disable {
             display: block;
         }
@@ -78,25 +91,28 @@
         .product-card__img-wrapper {
             margin-right: 57px;
             padding: 80px 23px;
-            width: 370px;
+            width: 100%;
             height: 100%;
+            max-width: 370px;
             border: 1px solid #f2f2f2;
         }
 
         .product-card__box {
-            width: 320px;
+            width: 100%;
             height: 330px;
+            max-width: 320px;
         }
 
         .product-card__subtitle {
-            margin-bottom: 26px;
+            margin-top: 0;
+            margin-bottom: 20px;
             font-size: 38px;
             text-align: left;
         }
 
         .product-card__star {
             z-index: 1;
-            margin-bottom: 37px;
+            margin-bottom: 22px;
             width: 18px;
         }
 
@@ -104,13 +120,16 @@
             display: flex;
             flex-direction: row-reverse;
             justify-content: flex-end;
+            margin-bottom: 10px;
+            font-weight: 500;
             font-size: 30px;
+            color: $blue80;
         }
 
         .product-card__text {
             @include line-clamp (5);
 
-            margin-bottom: 40px;
+            margin-bottom: 35px;
             font-size: 16px;
             color: $blue80;
         }
@@ -133,6 +152,8 @@
             // transition: background-color 0.3s;
 
             svg {
+                width: 22px;
+                height: 22px;
                 fill: $blue20;
 
                 // display: block;
@@ -152,7 +173,11 @@
         }
 
         .product-card__icon:not(:last-child) {
-            margin-right: 10px;
+            margin-right: 12px;
+        }
+
+        @include r($md) {
+            height: 400px;
         }
     }
 }

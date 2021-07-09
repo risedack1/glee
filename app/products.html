@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glee | Главная</title>
+    <title>Glee | Products</title>
     <link rel="icon" href="images/icons/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -15,7 +15,7 @@
         <div class="header__inner">
             <nav class="menu">
                 <a class="logo header__logo" href="#">
-                    <img class="logo__image" src="images/icons/logo.svg" alt="logo Glee">
+                    <img class="logo__image" src="images/icons/logo.png" alt="logo Glee">
                 </a>
                 <button class="burger">
                     <span class="burger__line"></span>
@@ -33,7 +33,7 @@
                     </li>
                     <li class="menu__item">
                         <a class="menu__link link clickable" href="#">
-                            Service
+                            Services
                         </a>
                     </li>
                     <li class="menu__item">
@@ -100,9 +100,15 @@
 </section>
         <section class="shop">
             <div class="container">
+                <button class="filter-button">
+                    <svg class="">
+                        <use xlink:href="images/sprite.svg#filter"></use>
+                    </svg>
+                </button>
                 <div class="shop__inner">
-                    <div class="shop__filter">
-                        <div class="filter-shop">
+                    <div class="shop__sidebar">
+                        <div class="shop__filter shop-filter">
+                            <div class="filter-shop">
     <div class="filter-shop__item category">
         <span class="category__title title-filters">category</span>
         <form class="category__form" action="#">
@@ -132,7 +138,7 @@
     <div class="filter-shop__item price">
         <span class="price__title title-filters">price</span>
         <form class="price__form" action="#">
-            <input class="price__input" type="text" data-min="0" data-max="800" data-from="100" data-to="500">
+            <input class="price__input" type="text" data-min="0" data-max="800" data-from="200.00" data-to="500.00">
             <div class="price__cost">
                 <span class="prise__dollar">
                     $<span class="price__from"></span>
@@ -185,6 +191,7 @@
         </form>
     </div>
 </div>
+                        </div>
                         <div class="recent-products">
                             <span class="recent-products__title title-filters">
                                 recent products
@@ -243,7 +250,6 @@
                                 </li>
                             </ul>
                         </div>
-
                     </div>
                     <div class="shop__content products-shop">
                         <div class="shop__view">
@@ -268,6 +274,7 @@
             <ul class="product-card__list">
                 <li class="product-card__item">
                     <a class="circle-btn circle-btn--icon" href="#">
+                        <span class="sr-only">Search</span>
                         <svg>
                             <use xlink:href="images/sprite.svg#search"></use>
                         </svg>
@@ -275,13 +282,15 @@
                 </li>
                 <li class="product-card__item">
                     <button class="circle-btn circle-btn--icon" href="#">
+                        <span class="sr-only">Add to basket</span>
                         <svg>
                             <use xlink:href="images/sprite.svg#basket"></use>
                         </svg>
                     </button>
                 </li>
-                <li class="product-card__itam">
+                <li class="product-card__item">
                     <button class="circle-btn circle-btn--icon" href="#">
+                        <span class="sr-only">Like</span>
                         <svg>
                             <use xlink:href="images/sprite.svg#like"></use>
                         </svg>
@@ -305,11 +314,13 @@
         </div>
         <div class="product-card__icons list-disable">
             <button class="product-card__icon circle-btn">
+                <span class="sr-only">Add to basket</span>
                 <svg class="">
                     <use xlink:href="images/sprite.svg#basket"></use>
                 </svg>
             </button>
             <button class="product-card__icon circle-btn">
+                <span class="sr-only">Like</span>
                 <svg class="">
                     <use xlink:href="images/sprite.svg#like"></use>
                 </svg>
@@ -326,6 +337,7 @@
             <ul class="product-card__list">
                 <li class="product-card__item">
                     <a class="circle-btn circle-btn--icon" href="#">
+                        <span class="sr-only">Search</span>
                         <svg>
                             <use xlink:href="images/sprite.svg#search"></use>
                         </svg>
@@ -333,13 +345,15 @@
                 </li>
                 <li class="product-card__item">
                     <button class="circle-btn circle-btn--icon" href="#">
+                        <span class="sr-only">Add to basket</span>
                         <svg>
                             <use xlink:href="images/sprite.svg#basket"></use>
                         </svg>
                     </button>
                 </li>
-                <li class="product-card__itam">
+                <li class="product-card__item">
                     <button class="circle-btn circle-btn--icon" href="#">
+                        <span class="sr-only">Like</span>
                         <svg>
                             <use xlink:href="images/sprite.svg#like"></use>
                         </svg>
@@ -363,11 +377,13 @@
         </div>
         <div class="product-card__icons list-disable">
             <button class="product-card__icon circle-btn">
+                <span class="sr-only">Add to basket</span>
                 <svg class="">
                     <use xlink:href="images/sprite.svg#basket"></use>
                 </svg>
             </button>
             <button class="product-card__icon circle-btn">
+                <span class="sr-only">Like</span>
                 <svg class="">
                     <use xlink:href="images/sprite.svg#like"></use>
                 </svg>
@@ -384,6 +400,7 @@
             <ul class="product-card__list">
                 <li class="product-card__item">
                     <a class="circle-btn circle-btn--icon" href="#">
+                        <span class="sr-only">Search</span>
                         <svg>
                             <use xlink:href="images/sprite.svg#search"></use>
                         </svg>
@@ -391,13 +408,15 @@
                 </li>
                 <li class="product-card__item">
                     <button class="circle-btn circle-btn--icon" href="#">
+                        <span class="sr-only">Add to basket</span>
                         <svg>
                             <use xlink:href="images/sprite.svg#basket"></use>
                         </svg>
                     </button>
                 </li>
-                <li class="product-card__itam">
+                <li class="product-card__item">
                     <button class="circle-btn circle-btn--icon" href="#">
+                        <span class="sr-only">Like</span>
                         <svg>
                             <use xlink:href="images/sprite.svg#like"></use>
                         </svg>
@@ -421,11 +440,13 @@
         </div>
         <div class="product-card__icons list-disable">
             <button class="product-card__icon circle-btn">
+                <span class="sr-only">Add to basket</span>
                 <svg class="">
                     <use xlink:href="images/sprite.svg#basket"></use>
                 </svg>
             </button>
             <button class="product-card__icon circle-btn">
+                <span class="sr-only">Like</span>
                 <svg class="">
                     <use xlink:href="images/sprite.svg#like"></use>
                 </svg>
@@ -442,6 +463,7 @@
             <ul class="product-card__list">
                 <li class="product-card__item">
                     <a class="circle-btn circle-btn--icon" href="#">
+                        <span class="sr-only">Search</span>
                         <svg>
                             <use xlink:href="images/sprite.svg#search"></use>
                         </svg>
@@ -449,13 +471,15 @@
                 </li>
                 <li class="product-card__item">
                     <button class="circle-btn circle-btn--icon" href="#">
+                        <span class="sr-only">Add to basket</span>
                         <svg>
                             <use xlink:href="images/sprite.svg#basket"></use>
                         </svg>
                     </button>
                 </li>
-                <li class="product-card__itam">
+                <li class="product-card__item">
                     <button class="circle-btn circle-btn--icon" href="#">
+                        <span class="sr-only">Like</span>
                         <svg>
                             <use xlink:href="images/sprite.svg#like"></use>
                         </svg>
@@ -479,11 +503,13 @@
         </div>
         <div class="product-card__icons list-disable">
             <button class="product-card__icon circle-btn">
+                <span class="sr-only">Add to basket</span>
                 <svg class="">
                     <use xlink:href="images/sprite.svg#basket"></use>
                 </svg>
             </button>
             <button class="product-card__icon circle-btn">
+                <span class="sr-only">Like</span>
                 <svg class="">
                     <use xlink:href="images/sprite.svg#like"></use>
                 </svg>
@@ -500,6 +526,7 @@
             <ul class="product-card__list">
                 <li class="product-card__item">
                     <a class="circle-btn circle-btn--icon" href="#">
+                        <span class="sr-only">Search</span>
                         <svg>
                             <use xlink:href="images/sprite.svg#search"></use>
                         </svg>
@@ -507,13 +534,15 @@
                 </li>
                 <li class="product-card__item">
                     <button class="circle-btn circle-btn--icon" href="#">
+                        <span class="sr-only">Add to basket</span>
                         <svg>
                             <use xlink:href="images/sprite.svg#basket"></use>
                         </svg>
                     </button>
                 </li>
-                <li class="product-card__itam">
+                <li class="product-card__item">
                     <button class="circle-btn circle-btn--icon" href="#">
+                        <span class="sr-only">Like</span>
                         <svg>
                             <use xlink:href="images/sprite.svg#like"></use>
                         </svg>
@@ -537,11 +566,13 @@
         </div>
         <div class="product-card__icons list-disable">
             <button class="product-card__icon circle-btn">
+                <span class="sr-only">Add to basket</span>
                 <svg class="">
                     <use xlink:href="images/sprite.svg#basket"></use>
                 </svg>
             </button>
             <button class="product-card__icon circle-btn">
+                <span class="sr-only">Like</span>
                 <svg class="">
                     <use xlink:href="images/sprite.svg#like"></use>
                 </svg>
@@ -558,6 +589,7 @@
             <ul class="product-card__list">
                 <li class="product-card__item">
                     <a class="circle-btn circle-btn--icon" href="#">
+                        <span class="sr-only">Search</span>
                         <svg>
                             <use xlink:href="images/sprite.svg#search"></use>
                         </svg>
@@ -565,13 +597,15 @@
                 </li>
                 <li class="product-card__item">
                     <button class="circle-btn circle-btn--icon" href="#">
+                        <span class="sr-only">Add to basket</span>
                         <svg>
                             <use xlink:href="images/sprite.svg#basket"></use>
                         </svg>
                     </button>
                 </li>
-                <li class="product-card__itam">
+                <li class="product-card__item">
                     <button class="circle-btn circle-btn--icon" href="#">
+                        <span class="sr-only">Like</span>
                         <svg>
                             <use xlink:href="images/sprite.svg#like"></use>
                         </svg>
@@ -595,11 +629,13 @@
         </div>
         <div class="product-card__icons list-disable">
             <button class="product-card__icon circle-btn">
+                <span class="sr-only">Add to basket</span>
                 <svg class="">
                     <use xlink:href="images/sprite.svg#basket"></use>
                 </svg>
             </button>
             <button class="product-card__icon circle-btn">
+                <span class="sr-only">Like</span>
                 <svg class="">
                     <use xlink:href="images/sprite.svg#like"></use>
                 </svg>
@@ -616,6 +652,7 @@
             <ul class="product-card__list">
                 <li class="product-card__item">
                     <a class="circle-btn circle-btn--icon" href="#">
+                        <span class="sr-only">Search</span>
                         <svg>
                             <use xlink:href="images/sprite.svg#search"></use>
                         </svg>
@@ -623,13 +660,15 @@
                 </li>
                 <li class="product-card__item">
                     <button class="circle-btn circle-btn--icon" href="#">
+                        <span class="sr-only">Add to basket</span>
                         <svg>
                             <use xlink:href="images/sprite.svg#basket"></use>
                         </svg>
                     </button>
                 </li>
-                <li class="product-card__itam">
+                <li class="product-card__item">
                     <button class="circle-btn circle-btn--icon" href="#">
+                        <span class="sr-only">Like</span>
                         <svg>
                             <use xlink:href="images/sprite.svg#like"></use>
                         </svg>
@@ -653,11 +692,13 @@
         </div>
         <div class="product-card__icons list-disable">
             <button class="product-card__icon circle-btn">
+                <span class="sr-only">Add to basket</span>
                 <svg class="">
                     <use xlink:href="images/sprite.svg#basket"></use>
                 </svg>
             </button>
             <button class="product-card__icon circle-btn">
+                <span class="sr-only">Like</span>
                 <svg class="">
                     <use xlink:href="images/sprite.svg#like"></use>
                 </svg>
@@ -674,6 +715,7 @@
             <ul class="product-card__list">
                 <li class="product-card__item">
                     <a class="circle-btn circle-btn--icon" href="#">
+                        <span class="sr-only">Search</span>
                         <svg>
                             <use xlink:href="images/sprite.svg#search"></use>
                         </svg>
@@ -681,13 +723,15 @@
                 </li>
                 <li class="product-card__item">
                     <button class="circle-btn circle-btn--icon" href="#">
+                        <span class="sr-only">Add to basket</span>
                         <svg>
                             <use xlink:href="images/sprite.svg#basket"></use>
                         </svg>
                     </button>
                 </li>
-                <li class="product-card__itam">
+                <li class="product-card__item">
                     <button class="circle-btn circle-btn--icon" href="#">
+                        <span class="sr-only">Like</span>
                         <svg>
                             <use xlink:href="images/sprite.svg#like"></use>
                         </svg>
@@ -711,11 +755,13 @@
         </div>
         <div class="product-card__icons list-disable">
             <button class="product-card__icon circle-btn">
+                <span class="sr-only">Add to basket</span>
                 <svg class="">
                     <use xlink:href="images/sprite.svg#basket"></use>
                 </svg>
             </button>
             <button class="product-card__icon circle-btn">
+                <span class="sr-only">Like</span>
                 <svg class="">
                     <use xlink:href="images/sprite.svg#like"></use>
                 </svg>
@@ -732,6 +778,7 @@
             <ul class="product-card__list">
                 <li class="product-card__item">
                     <a class="circle-btn circle-btn--icon" href="#">
+                        <span class="sr-only">Search</span>
                         <svg>
                             <use xlink:href="images/sprite.svg#search"></use>
                         </svg>
@@ -739,13 +786,15 @@
                 </li>
                 <li class="product-card__item">
                     <button class="circle-btn circle-btn--icon" href="#">
+                        <span class="sr-only">Add to basket</span>
                         <svg>
                             <use xlink:href="images/sprite.svg#basket"></use>
                         </svg>
                     </button>
                 </li>
-                <li class="product-card__itam">
+                <li class="product-card__item">
                     <button class="circle-btn circle-btn--icon" href="#">
+                        <span class="sr-only">Like</span>
                         <svg>
                             <use xlink:href="images/sprite.svg#like"></use>
                         </svg>
@@ -769,11 +818,13 @@
         </div>
         <div class="product-card__icons list-disable">
             <button class="product-card__icon circle-btn">
+                <span class="sr-only">Add to basket</span>
                 <svg class="">
                     <use xlink:href="images/sprite.svg#basket"></use>
                 </svg>
             </button>
             <button class="product-card__icon circle-btn">
+                <span class="sr-only">Like</span>
                 <svg class="">
                     <use xlink:href="images/sprite.svg#like"></use>
                 </svg>
@@ -790,6 +841,7 @@
             <ul class="product-card__list">
                 <li class="product-card__item">
                     <a class="circle-btn circle-btn--icon" href="#">
+                        <span class="sr-only">Search</span>
                         <svg>
                             <use xlink:href="images/sprite.svg#search"></use>
                         </svg>
@@ -797,13 +849,15 @@
                 </li>
                 <li class="product-card__item">
                     <button class="circle-btn circle-btn--icon" href="#">
+                        <span class="sr-only">Add to basket</span>
                         <svg>
                             <use xlink:href="images/sprite.svg#basket"></use>
                         </svg>
                     </button>
                 </li>
-                <li class="product-card__itam">
+                <li class="product-card__item">
                     <button class="circle-btn circle-btn--icon" href="#">
+                        <span class="sr-only">Like</span>
                         <svg>
                             <use xlink:href="images/sprite.svg#like"></use>
                         </svg>
@@ -827,11 +881,13 @@
         </div>
         <div class="product-card__icons list-disable">
             <button class="product-card__icon circle-btn">
+                <span class="sr-only">Add to basket</span>
                 <svg class="">
                     <use xlink:href="images/sprite.svg#basket"></use>
                 </svg>
             </button>
             <button class="product-card__icon circle-btn">
+                <span class="sr-only">Like</span>
                 <svg class="">
                     <use xlink:href="images/sprite.svg#like"></use>
                 </svg>
@@ -848,6 +904,7 @@
             <ul class="product-card__list">
                 <li class="product-card__item">
                     <a class="circle-btn circle-btn--icon" href="#">
+                        <span class="sr-only">Search</span>
                         <svg>
                             <use xlink:href="images/sprite.svg#search"></use>
                         </svg>
@@ -855,13 +912,15 @@
                 </li>
                 <li class="product-card__item">
                     <button class="circle-btn circle-btn--icon" href="#">
+                        <span class="sr-only">Add to basket</span>
                         <svg>
                             <use xlink:href="images/sprite.svg#basket"></use>
                         </svg>
                     </button>
                 </li>
-                <li class="product-card__itam">
+                <li class="product-card__item">
                     <button class="circle-btn circle-btn--icon" href="#">
+                        <span class="sr-only">Like</span>
                         <svg>
                             <use xlink:href="images/sprite.svg#like"></use>
                         </svg>
@@ -885,11 +944,13 @@
         </div>
         <div class="product-card__icons list-disable">
             <button class="product-card__icon circle-btn">
+                <span class="sr-only">Add to basket</span>
                 <svg class="">
                     <use xlink:href="images/sprite.svg#basket"></use>
                 </svg>
             </button>
             <button class="product-card__icon circle-btn">
+                <span class="sr-only">Like</span>
                 <svg class="">
                     <use xlink:href="images/sprite.svg#like"></use>
                 </svg>
@@ -906,6 +967,7 @@
             <ul class="product-card__list">
                 <li class="product-card__item">
                     <a class="circle-btn circle-btn--icon" href="#">
+                        <span class="sr-only">Search</span>
                         <svg>
                             <use xlink:href="images/sprite.svg#search"></use>
                         </svg>
@@ -913,13 +975,15 @@
                 </li>
                 <li class="product-card__item">
                     <button class="circle-btn circle-btn--icon" href="#">
+                        <span class="sr-only">Add to basket</span>
                         <svg>
                             <use xlink:href="images/sprite.svg#basket"></use>
                         </svg>
                     </button>
                 </li>
-                <li class="product-card__itam">
+                <li class="product-card__item">
                     <button class="circle-btn circle-btn--icon" href="#">
+                        <span class="sr-only">Like</span>
                         <svg>
                             <use xlink:href="images/sprite.svg#like"></use>
                         </svg>
@@ -943,11 +1007,13 @@
         </div>
         <div class="product-card__icons list-disable">
             <button class="product-card__icon circle-btn">
+                <span class="sr-only">Add to basket</span>
                 <svg class="">
                     <use xlink:href="images/sprite.svg#basket"></use>
                 </svg>
             </button>
             <button class="product-card__icon circle-btn">
+                <span class="sr-only">Like</span>
                 <svg class="">
                     <use xlink:href="images/sprite.svg#like"></use>
                 </svg>
@@ -972,6 +1038,64 @@
                                 <a class="pagination__link" href="#">Next</a>
                             </li>
                         </ul>
+                        <div class="recent-products recent-products--dublicate">
+                            <span class="recent-products__title title-filters">
+                                recent products
+                            </span>
+                            <ul class="recent-products__list">
+                                <li class="recent-products__item">
+                                    <article class="recent-product">
+    <a class="recent-product__inner" href="#">
+        <div class="recent-product__box">
+            <img class="recent-product__image" src="images/products/lamp3.png" alt="Lamp">
+        </div>
+        <div class="recent-product__content">
+            <span class="recent-product__subtitle">
+                Pendant lamp
+            </span>
+            <div class="recent-product__star star" data-rateyo-star-width="10px" data-rateyo-read-only="true">
+            </div>
+            <span class="recent-product__cost">23$</span>
+        </div>
+    </a>
+</article>
+                                </li>
+                                <li class="recent-products__item">
+                                    <article class="recent-product">
+    <a class="recent-product__inner" href="#">
+        <div class="recent-product__box">
+            <img class="recent-product__image" src="images/products/lamp1.png" alt="Lamp">
+        </div>
+        <div class="recent-product__content">
+            <span class="recent-product__subtitle">
+                Pendant lamp
+            </span>
+            <div class="recent-product__star star" data-rateyo-star-width="10px" data-rateyo-read-only="true">
+            </div>
+            <span class="recent-product__cost">23$</span>
+        </div>
+    </a>
+</article>
+                                </li>
+                                <li class="recent-products__item">
+                                    <article class="recent-product">
+    <a class="recent-product__inner" href="#">
+        <div class="recent-product__box">
+            <img class="recent-product__image" src="images/products/lamp2.png" alt="Lamp">
+        </div>
+        <div class="recent-product__content">
+            <span class="recent-product__subtitle">
+                Pendant lamp
+            </span>
+            <div class="recent-product__star star" data-rateyo-star-width="10px" data-rateyo-read-only="true">
+            </div>
+            <span class="recent-product__cost">23$</span>
+        </div>
+    </a>
+</article>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

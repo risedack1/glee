@@ -1,4 +1,16 @@
 $(function () {
+  $('.filter-button').on('click', function() {
+    $('.filter-button').toggleClass('filter-button--active')
+    $('.shop-filter').toggleClass('shop-filter--active')
+
+    // Клик вне модально окна-------------------------------------------------------------------
+
+    $(".shop-filter--active").on('click',function(e){
+      if($(e.target).attr("class") != "filter-shop")
+    $(".shop-filter").removeClass('shop-filter--active');
+    })
+  });
+
   $('.shop__btn--list').on('click', function () { 
     $('.product-shop__content').addClass('product-shop__content--active')
     $('.shop__btn--list').addClass('shop__btn--active')
@@ -33,9 +45,10 @@ $(function () {
   $(".price__input").ionRangeSlider({
     type: "double",
     prefix: "$",
+    step: "0.01",
     onStart: function (data) {
-      $('.price__from').text(data.from);
-      $('.price__to').text(data.to);
+      $('.price__from').text(data.from + ".00");
+      $('.price__to').text(data.to + ".00");
     },
     onChange: function (data) {
       $('.price__from').text(data.from);
@@ -72,6 +85,8 @@ $(function () {
     ]
   });
 
+  // События по скролу-----------------------------------------------------------------------------
+
   $(window).scroll(function () {
     // sticky navbar on scroll script
     if (this.scrollY > 50) {
@@ -82,6 +97,13 @@ $(function () {
       $('.slider-top--sticky').removeClass("slider-top--sticky");
     }
     var scrolled = $(window).scrollTop();
+    var shopHeight = $('.shop').height();
+
+    if (this.scrollY > shopHeight) {
+      $('.filter-button').addClass('filter-button--disable')
+    }else{
+      $('.filter-button').removeClass('filter-button--disable')
+    }
 
     if (scrolled > 100 && scrolled > scrollPrev) {
       $('.header').addClass('header--visible');
@@ -95,6 +117,8 @@ $(function () {
     $('.menu__list').removeClass('menu__list--active')
     $('.burger').removeClass('burger--active')
   });
+
+  // Два микситап---------------------------------------------------------------------------------------
 
   let containerEl1 = document.querySelector('.design');
   let containerEl2 = document.querySelector('.products');

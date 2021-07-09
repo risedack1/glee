@@ -1,3 +1,46 @@
+.recent-products {
+    &--dublicate {
+        display: none;
+    }
+
+    @include r($lg) {
+        display: none;
+
+        &--dublicate {
+            display: block;
+            text-align: center;
+
+            .recent-products__list {
+                display: flex;
+                justify-content: center;
+            }
+
+            .recent-product__inner {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .recent-product__subtitle {
+                @include r($xsm) {
+                    display: inline-block;
+                }
+            }
+
+            .recent-products__item:not(:last-child) {
+                margin-right: 30px;
+
+                @include r($xsm) {
+                    margin-right: 15px;
+                }
+            }
+
+            .recent-product__content {
+                padding: 0;
+            }
+        }
+    }
+}
+
 .recent-product {
     max-width: 270px;
     transition: background-color 0.3s;
