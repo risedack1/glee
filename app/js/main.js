@@ -5,10 +5,10 @@ $(function () {
 
     // Клик вне модально окна-------------------------------------------------------------------
 
-    $(".shop-filter--active").on('click',function(e){
-      if($(e.target).attr("class") != "filter-shop")
-    $(".shop-filter").removeClass('shop-filter--active');
-    })
+    // $(".shop-filter--active").on('click',function(e){
+    //   if($(e.target).attr("class") != "filter-shop")
+    // $(".shop-filter").removeClass('shop-filter--active');
+    // })
   });
 
   $('.shop__btn--list').on('click', function () { 

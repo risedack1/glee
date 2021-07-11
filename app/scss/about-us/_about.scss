@@ -1,0 +1,156 @@
+.about {
+    padding: 120px 0;
+
+    &__inner {
+        display: flex;
+    }
+
+    &__box {
+        width: 100%;
+        height: 680px;
+        max-width: 570px;
+
+        @include r($md) {
+            display: none;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__content {
+        padding: 50px 10px 90px 50px;
+        width: 100%;
+        max-width: 600px;
+
+        @include r($lg) {
+            padding: 30px 5px;
+        }
+    }
+
+    &__stat {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 40px;
+    }
+
+    &__number {
+        display: inline-block;
+        margin-right: 30px;
+        font-weight: 700;
+        font-size: 140px;
+        line-height: 0.8;
+        color: $blue20;
+
+        @include r($xsm) {
+            font-size: 90px;
+        }
+    }
+
+    &__skills {
+        font-size: 16px;
+        color: $blue80;
+    }
+
+    &__title {
+        margin-bottom: 50px;
+        font-family: "DMSans", sans-serif;
+        font-size: 36px;
+        color: $blue80;
+
+        @include r($md) {
+            margin-bottom: 30px;
+            font-size: 22px;
+        }
+    }
+
+    &__text {
+        @include line-clamp(7);
+
+        margin-bottom: 63px;
+        color: $blue80;
+
+        @include r($md) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__achievements {
+        display: flex;
+        padding-top: 28px;
+        border-top: 1px solid rgba(30, 44, 66, 0.1);
+
+        @include r($md) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    &__achievement {
+        position: relative;
+        padding: 14px 0 16px 88px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 27px;
+            top: 50%;
+            width: 40px;
+            height: 40px;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            transform: translateY(-50%);
+        }
+
+        &:not(:last-child) {
+            padding-right: 25px;
+            border-right: 1px solid rgba(30, 44, 66, 0.1);
+        }
+
+        &:first-child {
+            padding-left: 60px;
+
+            &::before {
+                left: 0;
+
+                @include r($md) {
+                    left: 27px;
+                }
+            }
+
+            @include r($md) {
+                padding-left: 88px;
+            }
+        }
+
+        &--revenue::before {
+            background-image: url("../../images/icons/revenue.svg");
+        }
+
+        &--projects::before {
+            background-image: url("../../images/icons/projects.svg");
+        }
+
+        &--awards::before {
+            background-image: url("../../images/icons/awards.svg");
+        }
+
+        @include r($md) {
+            padding-right: 25px;
+            border-right: 1px solid rgba(30, 44, 66, 0.1);
+            border-left: 1px solid rgba(30, 44, 66, 0.1);
+        }
+    }
+
+    @include r($md) {
+        padding: 60px 0;
+    }
+
+    @include r($xsm) {
+        padding-top: 30px;
+    }
+}
