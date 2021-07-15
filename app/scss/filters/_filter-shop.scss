@@ -40,11 +40,13 @@
     margin-bottom: 50px;
     width: 100%;
     max-width: 270px;
+
+    &__item {
+        margin-bottom: 56px;
+    }
 }
 
 .category {
-    margin-bottom: 56px;
-
     &__title {
         margin-bottom: 22px;
     }
@@ -212,5 +214,34 @@
         height: 3px;
         background-color: $blue20;
         transform: translate(100%, -50%);
+    }
+}
+
+.search {
+    width: 100%;
+
+    &__form {
+        display: flex;
+    }
+
+    &__input {
+        flex: 1 1 auto;
+        border: 1px solid #edf1f4;
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        border: none;
+        background-color: #edf1f4;
+
+        svg {
+            width: 20px;
+            height: 20px;
+            fill: #094074;
+        }
     }
 }
