@@ -1,0 +1,234 @@
+.contact {
+    padding: 120px 0 20px;
+
+    &__subtitle {
+        display: block;
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        text-align: center;
+        color: $blue20;
+    }
+
+    &__title {
+        margin-bottom: 74px;
+        color: $blue70;
+    }
+
+    &__list {
+        display: grid;
+        grid-column-gap: 27px;
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 120px;
+
+        @include r($lg) {
+            grid-row-gap: 27px;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include r($md) {
+            margin-bottom: 60px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 70px 50px;
+        border: 2px solid transparent;
+        background-color: #fbfbfb;
+        transition: border-color 0.3s;
+
+        &:hover {
+            border-color: $blue20;
+        }
+
+        &:hover .contact__icon {
+            background-color: $blue20;
+
+            svg {
+                fill: $bg;
+            }
+        }
+
+        @include r($lg) {
+            padding: 30px 20px;
+        }
+
+        @include r($md) {
+            grid-column: 1/4;
+        }
+    }
+
+    &__icon {
+        margin-bottom: 65px;
+        padding: 22px;
+        width: 81px;
+        height: 81px;
+        border-radius: 10px;
+        background-color: $bg;
+        transition: background-color 0.3s;
+    }
+
+    svg {
+        width: 100%;
+        height: 100%;
+        fill: $blue20;
+        transition: fill 0.3s;
+    }
+
+    &__item-title {
+        margin-bottom: 28px;
+        font-family: "DMSans", sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.2;
+        color: #222;
+    }
+
+    &__item-content {
+        display: block;
+        text-align: center;
+
+        &--address {
+            max-width: 160px;
+            font-style: normal;
+        }
+    }
+
+    &__link {
+        display: block;
+        margin-bottom: 5px;
+        color: $blue70;
+    }
+
+    &__feedback {
+        display: flex;
+
+        @include r($lg) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__form {
+        flex: 0 1 auto;
+        margin-right: 50px;
+        width: 100%;
+        max-width: 626px;
+
+        @include r($lg) {
+            margin-right: 0;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__label {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        max-width: 300px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: 22px;
+            top: 50%;
+            width: 19px;
+            height: 15px;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            transform: translateY(-50%);
+        }
+
+        &:first-child {
+            margin-right: 20px;
+
+            @include r($md) {
+                margin-right: 0;
+                margin-bottom: 30px;
+            }
+        }
+
+        &--user {
+            &::after {
+                background-image: url("../../images/icons/form-user.svg");
+            }
+        }
+
+        &--message {
+            &::after {
+                background-image: url("../../images/icons/form-letter.svg");
+            }
+        }
+
+        @include r($md) {
+            max-width: 100%;
+        }
+    }
+
+    &__textbox {
+        position: relative;
+        display: block;
+        margin: 22px 0 28px;
+        width: 100%;
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: 22px;
+            top: 26px;
+            width: 19px;
+            height: 15px;
+            background-image: url("../../images/icons/form-message.svg");
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__text {
+        position: relative;
+        width: 100%;
+        height: 176px;
+        resize: none;
+    }
+
+    &__button.button {
+        padding: 20px 45px;
+        border-radius: 5px;
+        text-transform: uppercase;
+    }
+
+    &__input,
+    &__text {
+        display: inline-block;
+        padding: 16px 22px;
+        width: 100%;
+        border: none;
+        background-color: #f5f5f5;
+
+        &::placeholder {
+            opacity: 0.8;
+            text-transform: uppercase;
+            color: #565872;
+        }
+    }
+
+    @include r($md) {
+        padding-top: 60px;
+    }
+}
+
+#map {
+    width: 490px;
+    min-height: 100%;
+
+    @include r($lg) {
+        width: 100%;
+        height: 300px;
+        max-width: 626px;
+    }
+}

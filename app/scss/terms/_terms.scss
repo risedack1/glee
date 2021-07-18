@@ -1,0 +1,40 @@
+.terms {
+    padding-top: 120px;
+
+    &__title {
+        margin-bottom: 15px;
+        font-weight: 500;
+        font-size: 23px;
+        color: $blue80;
+
+        @include r($md) {
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
+    }
+
+    &__list {
+        margin-bottom: 75px;
+        padding-left: 30px;
+        list-style-type: decimal-leading-zero;
+    }
+
+    &__item {
+        margin-bottom: 30px;
+        padding-left: 10px;
+        line-height: 1.5;
+        color: $blue80;
+    }
+
+    &__text {
+        color: $blue80;
+
+        &:not(:last-child) {
+            margin-bottom: 70px;
+        }
+    }
+
+    @include r($md) {
+        padding-top: 60px;
+    }
+}

@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glee | About Us</title>
+    <link rel="icon" href="images/icons/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <header class="header">
+    <div class="container container--lg">
+        <div class="header__inner">
+            <nav class="menu">
+                <a class="logo header__logo" href="#">
+                    <img class="logo__image" src="images/icons/logo.png" alt="logo Glee">
+                </a>
+                <button class="burger">
+                    <span class="burger__line"></span>
+                </button>
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a class="menu__link menu__link--active link clickable" href="#">
+                            Home +
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link link clickable" href="#">
+                            About
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link link clickable" href="#">
+                            Services
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link link clickable" href="#">
+                            Pages +
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link link clickable" href="#">
+                            News
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link link clickable" href="#">
+                            Contacts
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="user-icons">
+                    <button class="circle-btn user-icons__item" type="button">
+                        <span class="sr-only">Search</span>
+                        <svg>
+                            <use xlink:href="images/sprite.svg#search"></use>
+                        </svg>
+                    </button>
+                    <a class="circle-btn user-icons__item user-icons__item--like" href="#" type="button">
+                        <span class="sr-only">Go to likes</span>
+                        <svg>
+                            <use xlink:href="images/sprite.svg#like"></use>
+                        </svg>
+                        <span class="user-icons__num">0</span>
+                    </a>
+                    <a class="circle-btn user-icons__item user-icons__item--basket" href="#" type="button">
+                        <span class="sr-only">Go to basket</span>
+                        <svg>
+                            <use xlink:href="images/sprite.svg#basket"></use>
+                        </svg>
+                        <span class="user-icons__num user-icons__num--basket">0</span>
+                    </a>
+                    <button class="circle-btn user-icons__item" type="button">
+                        <span class="sr-only">Menu</span>
+                        <svg>
+                            <use xlink:href="images/sprite.svg#menu"></use>
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+    <main class="main">
+        <section class="breadcrumbs">
+    <h1 class="breadcrumbs__title title">Contact</h1>
+    <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link link" href="#">Home</a>
+        </li>
+        <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link link" href="#">Contact</a>
+        </li>
+    </ul>
+</section>
+
+        <section class="contact">
+            <div class="container">
+                <span class="contact__subtitle">
+                    Write Here
+                </span>
+                <h2 class="contact__title title">
+                    Get In Touch
+                </h2>
+
+                <ul class="contact__list">
+                    <li class="contact__item">
+                        <span class="contact__icon">
+                            <svg>
+                                <use xlink:href="images/sprite.svg#contact-address"></use>
+                            </svg>
+                        </span>
+                        <span class="contact__item-title">
+                            Address
+                        </span>
+                        <address class="contact__item-content contact__item-content--address">
+                            2416 Mapleview Drive
+                            Tampa, FL 33634
+                        </address>
+                    </li>
+                    <li class="contact__item">
+                        <span class="contact__icon">
+                            <svg>
+                                <use xlink:href="images/sprite.svg#letter"></use>
+                            </svg>
+                        </span>
+                        <span class="contact__item-title">
+                            Our Email
+                        </span>
+                        <span class="contact__item-content">
+                            <a class="contact__link link" href="mailto:contact@website.com">Main Email :
+                                contact@website.com</a>
+                            <a class="contact__link link" href="mailto:Info@mail.com">Inquiries : Info@mail.com</a>
+                        </span>
+                    </li>
+                    <li class="contact__item">
+                        <span class="contact__icon">
+                            <svg>
+                                <use xlink:href="images/sprite.svg#contact-phone"></use>
+                            </svg>
+                        </span>
+                        <span class="contact__item-title">
+                            Our Phone
+                        </span>
+                        <span class="contact__item-content">
+                            <a class="contact__link link" href="tel:0029129102320">Office Telephone : 0029129102320</a>
+                            <a class="contact__link link" href="tel:000232439493">Mobile : 000 2324 39493</a>
+                        </span>
+                    </li>
+                </ul>
+
+                <div class="contact__feedback">
+                    <form class="contact__form" action="#">
+                        <label class="contact__label contact__label--user">
+                            <input class="contact__input" placeholder="name" type="text">
+                        </label>
+                        <label class="contact__label contact__label--message">
+                            <input class="contact__input" placeholder="email" type="email">
+                        </label>
+                        <span class="contact__textbox">
+                            <textarea class="contact__text" placeholder="message"></textarea>
+                        </span>
+                        <button class="contact__button button" type="submit">
+                            send message
+                        </button>
+                    </form>
+                    <div id="map"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="articles">
+    <div class="container">
+        <div class="articles__header">
+            <h2 class="title articles__title">
+                Our Insights & Articles
+            </h2>
+            <a class="articles__all link" href="#">
+                View All
+            </a>
+        </div>
+        <ul class="articles__inner">
+            <li class="articles__item">
+                <article class="article-card">
+    <a class="article-card__box" href="#">
+        <img class="article-card__img" src="images/articles/item1.jpg" alt="news picture">
+    </a>
+    <a class="article-card__news clickable" href="#">
+        news
+    </a>
+    <div class="article-card__content">
+        <h3 class="article-card__subtitle">
+            <a class="article-card__link" href="#">
+                Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+            </a>
+        </h3>
+        <div class="article-card__bottom">
+            <time class="article-card__info" datatime="2020-01-28">
+                28 january, 2020
+            </time>
+            <a class="article-card__info article-card__info--author link" href="#">
+                by admin
+            </a>
+        </div>
+    </div>
+</article>
+            </li>
+            <li class="articles__item">
+                <article class="article-card">
+    <a class="article-card__box" href="#">
+        <img class="article-card__img" src="images/articles/item2.jpg" alt="news picture">
+    </a>
+    <a class="article-card__news clickable" href="#">
+        news
+    </a>
+    <div class="article-card__content">
+        <h3 class="article-card__subtitle">
+            <a class="article-card__link" href="#">
+                Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            </a>
+        </h3>
+        <div class="article-card__bottom">
+            <time class="article-card__info" datatime="2020-01-28">
+                28 january, 2020
+            </time>
+            <a class="article-card__info article-card__info--author link" href="#">
+                by admin
+            </a>
+        </div>
+    </div>
+</article>
+            </li>
+            <li class="articles__item">
+                <article class="article-card">
+    <a class="article-card__box" href="#">
+        <img class="article-card__img" src="images/articles/item3.jpg" alt="news picture">
+    </a>
+    <a class="article-card__news clickable" href="#">
+        news
+    </a>
+    <div class="article-card__content">
+        <h3 class="article-card__subtitle">
+            <a class="article-card__link" href="#">
+                Rncididunt ut labore et dolore magna aliqua. Ut enim
+            </a>
+        </h3>
+        <div class="article-card__bottom">
+            <time class="article-card__info" datatime="2020-01-28">
+                28 january, 2020
+            </time>
+            <a class="article-card__info article-card__info--author link" href="#">
+                by admin
+            </a>
+        </div>
+    </div>
+</article>
+            </li>
+        </ul>
+
+    </div>
+</section>
+        <div class="partners">
+    <div class="container">
+        <ul class="partners__inner">
+            <li class="partners__item">
+                <img class="partners__img" src="images/partners/item1.png" alt="partners">
+            </li>
+            <li class="partners__item">
+                <img class="partners__img" src="images/partners/item2.png" alt="partners">
+            </li>
+            <li class="partners__item">
+                <img class="partners__img" src="images/partners/item3.png" alt="partners">
+            </li>
+            <li class="partners__item">
+                <img class="partners__img" src="images/partners/item4.png" alt="partners">
+            </li>
+            <li class="partners__item">
+                <img class="partners__img" src="images/partners/item5.png" alt="partners">
+            </li>
+            <li class="partners__item">
+                <img class="partners__img" src="images/partners/item4.png" alt="partners">
+            </li>
+            <li class="partners__item">
+                <img class="partners__img" src="images/partners/item5.png" alt="partners">
+            </li>
+        </ul>
+    </div>
+</div>
+    </main>
+
+    <footer class="footer">
+    <div class="container">
+        <div class="footer__top">
+            <div class="footer__column">
+                <a class="logo footer__logo" href="#">
+                    <img class="logo__image" src="images/icons/logo.svg" alt="logo Glee">
+                </a>
+                <address class="footer__contacts">
+                    <span class="footer__contact">
+                        <span class="footer__caps">Address: </span>4772 Wines Lane
+                        Houston, TX 77032
+                    </span>
+                    <a class="footer__contact link clickable" href="tel:+8323475843">
+                        <span class="footer__caps">Telephone: </span>+832-347-5843
+                    </a>
+                    <a class="footer__contact link clickable" href="email:contact@Glee.com">
+                        <span class="footer__caps">Email: </span>contact@Glee.com
+                    </a>
+                </address>
+            </div>
+            <div class="footer__column">
+                <button class="footer__title footer__title--slide">
+                    Services
+                </button>
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a class="footer__link link clickable" href="#">
+                            About us
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link link clickable" href="#">
+                            Return Policy
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link link clickable" href="#">
+                            Our Blog
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link link clickable" href="#">
+                            Contact Us
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link link clickable" href="#">
+                            Terms & Condition
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <button class="footer__title footer__title--slide">
+                    Account
+                </button>
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a class="footer__link link clickable" href="#">
+                            Your Account
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link link clickable" href="#">
+                            Checkout
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link link clickable" href="#">
+                            Login
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link link clickable" href="#">
+                            Register
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <span class="footer__title">
+                    newsletter
+                </span>
+                <div class="footer__text">
+                    <p>
+                        Subscribe by our newsletter and get
+                        update protidin.
+                    </p>
+                </div>
+                <form class="subscribtion-form" action="#">
+    <label class="subscribtion-form__label">
+        <span class="sr-only">Enter Your email address</span>
+        <input class="subscribtion-form__input input" type="email" name="email"
+            placeholder="Email address" required>
+    </label>
+    <button class="subscribtion-form__btn button" type="submit">Subscribe</button>
+</form>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p class="footer__copy">©2020 CopyRight Example. All rights reserved.</p>
+            <nav class="menu menu--footer">
+                <ul class="menu__list">
+                    <li class="menu__item menu__item--footer">
+                        <a class="menu__link link clickable" href="#">
+                            Home
+                        </a>
+                    </li>
+                    <li class="menu__item menu__item--footer">
+                        <a class="menu__link link clickable" href="#">
+                            About
+                        </a>
+                    </li>
+                    <li class="menu__item menu__item--footer">
+                        <a class="menu__link link clickable" href="#">
+                            Blog
+                        </a>
+                    </li>
+                    <li class="menu__item menu__item--footer">
+                        <a class="menu__link link clickable" href="#">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+</footer>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly" async>
+    </script>
+
+    <script>
+        let map;
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: {
+                    lat: 29.83095992210405,
+                    lng: -95.41076841279357
+                },
+                zoom: 10,
+                styles: [{
+                        "featureType": "administrative",
+                        "elementType": "labels.text.fill",
+                        "stylers": [{
+                            "color": "#444444"
+                        }]
+                    },
+                    {
+                        "featureType": "administrative.country",
+                        "elementType": "labels.text",
+                        "stylers": [{
+                                "saturation": "18"
+                            },
+                            {
+                                "lightness": "-55"
+                            },
+                            {
+                                "visibility": "simplified"
+                            },
+                            {
+                                "color": "#4484a1"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "landscape",
+                        "elementType": "all",
+                        "stylers": [{
+                                "color": "#f2f2f2"
+                            },
+                            {
+                                "saturation": "28"
+                            },
+                            {
+                                "lightness": "42"
+                            },
+                            {
+                                "gamma": "2.01"
+                            },
+                            {
+                                "weight": "1"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi",
+                        "elementType": "all",
+                        "stylers": [{
+                            "visibility": "all"
+                        }]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "all",
+                        "stylers": [{
+                                "saturation": -100
+                            },
+                            {
+                                "lightness": 45
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.highway",
+                        "elementType": "all",
+                        "stylers": [{
+                            "visibility": "simplified"
+                        }]
+                    },
+                    {
+                        "featureType": "road.arterial",
+                        "elementType": "labels.icon",
+                        "stylers": [{
+                            "visibility": "off"
+                        }]
+                    },
+                    {
+                        "featureType": "transit",
+                        "elementType": "all",
+                        "stylers": [{
+                            "visibility": "off"
+                        }]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "all",
+                        "stylers": [{
+                                "color": "#aaced9"
+                            },
+                            {
+                                "visibility": "on"
+                            }
+                        ]
+                    }
+                ]
+            });
+
+            const marker = new google.maps.Marker({
+                position: {
+                    lat: 29.76095992210405,
+                    lng: -95.38076841279357
+                },
+                map: map,
+                style: [{"featureType": "marker",
+                        "elementType": "on",
+                        "stylers": [{
+                            "color": "#444444"
+                        }]
+                    }]
+            });
+        }
+    </script>
+
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>
