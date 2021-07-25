@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('./parts/_head.html',{
+"title": "About Us"
+})
+
+<body>
+    @@include('./parts/components/_header.html')
+
+    <main class="main">
+        @@include('./parts/components/_breadcrumbs.html',{
+        "title": "Product Detalis",
+        "active-page": "Product Detalis"
+        })
+
+        <section class="product-self">
+            <div class="container">
+                <div class="product-self__inner">
+                    <div class="product-self__slider">
+                        <ul class="product-self__slider-left slider-small">
+                            <li class="slider-small__item">
+                                <img class="slider-small__image" src="images/products/slide-1.png" alt="product part">
+                            </li>
+                            <li class="slider-small__item">
+                                <img class="slider-small__image" src="images/products/slide-2.png" alt="product part">
+                            </li>
+                            <li class="slider-small__item">
+                                <img class="slider-small__image" src="images/products/slide-3.png" alt="product part">
+                            </li>
+                            <li class="slider-small__item">
+                                <img class="slider-small__image" src="images/products/slide-4.jpeg" alt="product part">
+                            </li>
+                        </ul>
+                        <ul class="product-self__slider-right slider-big">
+                            <li class="slider-big__item">
+                                <img class="slider-big__image" src="images/products/slide-1.png" alt="product image">
+                            </li>
+                            <li class="slider-big__item">
+                                <img class="slider-big__image" src="images/products/slide-2.png" alt="product image">
+                            </li>
+                            <li class="slider-big__item">
+                                <img class="slider-big__image" src="images/products/slide-3.png" alt="product image">
+                            </li>
+                            <li class="slider-big__item">
+                                <img class="slider-big__image" src="images/products/slide-4.jpeg" alt="product image">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="product-self__info">
+                        <h2 class="product-self__title">
+                            Pendant lamp
+                        </h2>
+                        <span class="star" data-rateyo-read-only="true" data-rateyo-star-width="18px"></span>
+                        <span class="product-self__cost">
+                            23$
+                        </span>
+                        <div class="product-self__text">
+                            <p>
+                                consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                aliquip ex ea commodo
+                            </p>
+                        </div>
+                        <form class="product-self__form" action="#">
+                            <input class="product-self__input" type="number" value="1" min="1">
+                            <button class="product-self__button button" type="submit">
+                                Add to cart
+                            </button>
+                        </form>
+
+                        <ul class="product-self__info info-box">
+                            <li class="info-box__item">
+                                SKU: <span>014</span>
+                            </li>
+                            <li class="info-box__item">
+                                Category: <span>Light</span>
+                            </li>
+                            <li class="info-box__item">
+                                Tag: <span>Decorative</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="product-self__tabs tabs">
+                    <ul class="tabs__list">
+                        <li class="tabs__item">
+                            <a class="tabs__link tabs__link--active" href="#tab1">
+                                Description
+                            </a>
+                        </li>
+                        <li class="tabs__item">
+                            <a class="tabs__link" href="#tab2">
+                                Additional information
+                            </a>
+                        </li>
+                        <li class="tabs__item">
+                            <a class="tabs__link" href="#tab3">
+                                Reviews <span>(2)</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="tabs__contents">
+                        <li class="tabs__content tabs__content--active" id="tab1">
+                            <div class="tabs__desc">
+                                <p>
+                                    consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                    nisi ut aliquip ex ea commodo Lorem ipsum dolor sit amet, consectetur adipisicing
+                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                    commodo consequat.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="tabs__content" id="tab2">
+                            Content 2
+                        </li>
+                        <li class="tabs__content" id="tab3">
+                            Content 3
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="related-products">
+            <div class="related-products__container container">
+                <h2 class="related-products__title title">
+                    Related products
+                </h2>
+                <ul class="related-products__slider">
+                    <li class="related-products__item">
+                        @@include('./parts/cards/_product-card.html', {
+                        "number": "1",
+                        "title": "Wooden radio",
+                        "cost": "39.00"
+                        })
+                    </li>
+
+                    <li class="related-products__item">
+                        @@include('./parts/cards/_product-card.html', {
+                        "number": "7",
+                        "title": "Wooden radio",
+                        "cost": "39.00"
+                        })
+                    </li>
+
+                    <li class="related-products__item">
+                        @@include('./parts/cards/_product-card.html', {
+                        "number": "6",
+                        "title": "Wooden radio",
+                        "cost": "39.00"
+                        })
+                    </li>
+
+                    <li class="related-products__item">
+                        @@include('./parts/cards/_product-card.html', {
+                        "number": "2",
+                        "title": "Wooden radio",
+                        "cost": "39.00"
+                        })
+                    </li>
+
+                    <li class="related-products__item">
+                        @@include('./parts/cards/_product-card.html', {
+                        "number": "3",
+                        "title": "Wooden radio",
+                        "cost": "39.00"
+                        })
+                    </li>
+
+                    <li class="related-products__item">
+                        @@include('./parts/cards/_product-card.html', {
+                        "number": "4",
+                        "title": "Wooden radio",
+                        "cost": "39.00"
+                        })
+                    </li>
+
+                    <li class="related-products__item">
+                        @@include('./parts/cards/_product-card.html', {
+                        "number": "5",
+                        "title": "Wooden radio",
+                        "cost": "39.00"
+                        })
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        @@include('./parts/components/_articles.html')
+        @@include('./parts/components/_partners.html')
+    </main>
+
+    @@include('./parts/components/_footer.html')
+
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>
