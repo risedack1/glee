@@ -180,4 +180,9 @@
             height: 400px;
         }
     }
+
+    @include r($lg) {
+        width: auto;
+        max-width: 460px;
+    }
 }

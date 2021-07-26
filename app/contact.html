@@ -155,17 +155,19 @@
                 </ul>
 
                 <div class="contact__feedback">
-                    <form class="contact__form" action="#">
-                        <label class="contact__label contact__label--user">
-                            <input class="contact__input" placeholder="name" type="text">
-                        </label>
-                        <label class="contact__label contact__label--message">
-                            <input class="contact__input" placeholder="email" type="email">
-                        </label>
-                        <span class="contact__textbox">
-                            <textarea class="contact__text" placeholder="message"></textarea>
+                    <form class="contact__form contact-form" action="#">
+                        <div class="contact-form__box">
+                            <label class="contact-form__label contact__label--user">
+                                <input class="contact-form__input" placeholder="name" type="text">
+                            </label>
+                            <label class="contact-form__label contact__label--message">
+                                <input class="contact-form__input" placeholder="email" type="email">
+                            </label>
+                        </div>
+                        <span class="contact-form__textbox">
+                            <textarea class="contact-form__text" placeholder="message"></textarea>
                         </span>
-                        <button class="contact__button button" type="submit">
+                        <button class="contact-form__button button" type="submit">
                             send message
                         </button>
                     </form>
@@ -539,12 +541,13 @@
                     lng: -95.38076841279357
                 },
                 map: map,
-                style: [{"featureType": "marker",
-                        "elementType": "on",
-                        "stylers": [{
-                            "color": "#444444"
-                        }]
+                style: [{
+                    "featureType": "marker",
+                    "elementType": "on",
+                    "stylers": [{
+                        "color": "#444444"
                     }]
+                }]
             });
         }
     </script>

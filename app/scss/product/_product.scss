@@ -1,9 +1,18 @@
 .product-self {
-    padding: 120px 130px;
+    padding: 120px 0;
 
     &__inner {
         display: flex;
         margin-bottom: 85px;
+
+        @include r($lg) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @include r($md) {
+            margin-bottom: 0;
+        }
     }
 
     &__slider {
@@ -11,6 +20,16 @@
         margin-right: 70px;
         height: 530px;
         max-width: 550px;
+
+        @include r($xl) {
+            flex-direction: column-reverse;
+            align-items: center;
+            height: auto;
+        }
+
+        @include r($lg) {
+            margin-right: 0;
+        }
     }
 
     &__info {
@@ -124,6 +143,12 @@
         justify-content: center;
         margin-right: 7px;
         width: 153px;
+
+        @include r($xl) {
+            display: flex;
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
     }
 
     &__button.button {
@@ -133,6 +158,10 @@
         font-weight: 400;
         font-size: 15px;
         text-transform: uppercase;
+    }
+
+    @include r($lg) {
+        padding: 60px 0;
     }
 }
 
@@ -157,6 +186,14 @@
         height: 100%;
         object-fit: contain;
     }
+
+    @include r($xl) {
+        width: 100%;
+    }
+
+    @include r($sm) {
+        display: none;
+    }
 }
 
 .slider-big {
@@ -178,19 +215,36 @@
         height: 100%;
         object-fit: contain;
     }
+
+    @include r($xsm) {
+        padding: 30px;
+        width: 300px;
+    }
+
+    @include r($xl) {
+        border: none;
+    }
 }
 
 .tabs {
     &__list {
         display: flex;
+        justify-content: center;
         margin-bottom: 30px;
-        margin-left: 160px;
+
+        @include r($md) {
+            flex-wrap: wrap;
+        }
     }
 
     &__item {
         margin: 0 6px;
         width: 100%;
         max-width: 242px;
+
+        @include r($md) {
+            margin-bottom: 15px;
+        }
     }
 
     &__link {
@@ -235,6 +289,15 @@
     &__title {
         margin-bottom: 70px;
         text-align: left;
+    }
+
+    &__slider {
+        text-align: center;
+    }
+
+    &__item {
+        margin: 0 auto;
+        max-width: 460px;
     }
 
     &__slick-next {
