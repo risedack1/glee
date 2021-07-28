@@ -47,6 +47,12 @@ $(function () {
     $(this).next().slideToggle()
     $(this).toggleClass('footer__title--active')
   });
+
+  $('.slide').on('click', function () {
+    $(this).next().slideToggle(500)
+    $(this).toggleClass('slide--active')
+  });
+
   $('.slider-top__wrapper').slick({
     dots: true,
     arrows: false,

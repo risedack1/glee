@@ -3,6 +3,10 @@
 
     &__box {
         display: flex;
+
+        @include r($md) {
+            flex-direction: column;
+        }
     }
 
     &__label {
@@ -28,7 +32,7 @@
 
             @include r($md) {
                 margin-right: 0;
-                margin-bottom: 30px;
+                margin-bottom: 20px;
             }
         }
 
@@ -99,6 +103,6 @@
     }
 
     @include r($md) {
-        padding-top: 60px;
+        padding-top: 30px;
     }
 }

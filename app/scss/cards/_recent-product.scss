@@ -1,42 +1,41 @@
 .recent-products {
-    &--dublicate {
-        display: none;
+    &__item {
+        @include r($lg) {
+            margin: 0 20px;
+        }
+
+        @include r($sm) {
+            margin: 0 10px;
+        }
+    }
+
+    &__list {
+        @include r($lg) {
+            display: flex;
+            justify-content: space-between;
+            overflow-x: auto;
+        }
+    }
+
+    @include r($sm) {
+        width: 100%;
     }
 
     @include r($lg) {
-        display: none;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+    }
+}
 
-        &--dublicate {
-            display: block;
-            text-align: center;
+span.recent-products__title {
+    @include r($lg) {
+        display: block;
+        text-align: center;
 
-            .recent-products__list {
-                display: flex;
-                justify-content: center;
-            }
-
-            .recent-product__inner {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .recent-product__subtitle {
-                @include r($xsm) {
-                    display: inline-block;
-                }
-            }
-
-            .recent-products__item:not(:last-child) {
-                margin-right: 30px;
-
-                @include r($xsm) {
-                    margin-right: 15px;
-                }
-            }
-
-            .recent-product__content {
-                padding: 0;
-            }
+        &::after {
+            width: 0;
         }
     }
 }
@@ -47,6 +46,12 @@
 
     &__inner {
         display: flex;
+
+        @include r($lg) {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
     }
 
     &__star {
@@ -69,12 +74,21 @@
     &__content {
         flex: 1 1 auto;
         padding: 0 0 5px 20px;
+
+        @include r($lg) {
+            padding-left: 5px;
+        }
     }
 
     &__subtitle {
         font-size: 14px;
         line-height: 1.2;
         color: #333;
+
+        @include r($md) {
+            display: inline-block;
+            padding: 5px 0;
+        }
     }
 
     .jq-ry-container {
