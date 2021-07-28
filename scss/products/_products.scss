@@ -1,0 +1,125 @@
+.shop {
+    padding: 110px 0 120px;
+
+    &__inner {
+        display: flex;
+    }
+
+    &__sidebar {
+        margin-right: 30px;
+        width: 100%;
+        max-width: 270px;
+
+        @include r($lg) {
+            margin-right: 0;
+            max-width: 0;
+        }
+    }
+
+    &__content {
+        flex: 1 1 auto;
+    }
+
+    &__view {
+        display: flex;
+        margin-bottom: 30px;
+        padding: 10px;
+        border: 2px solid $blue20;
+
+        @include r($sm) {
+            display: none;
+        }
+    }
+
+    &__btn {
+        width: 30px;
+        height: 30px;
+        border: none;
+        background-color: transparent;
+
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+
+        svg {
+            width: 30px;
+            height: 30px;
+            fill: $blue20;
+            transition: fill 0.3s;
+        }
+
+        &:hover {
+            svg {
+                fill: $blue70;
+            }
+        }
+
+        &--active {
+            svg {
+                fill: $blue80;
+            }
+        }
+    }
+
+    @include r($lg) {
+        position: relative;
+        padding-bottom: 220px;
+    }
+}
+
+.product-shop {
+    &__content {
+        display: grid;
+        justify-items: center;
+        grid-gap: 35px 29px;
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        margin-bottom: 100px;
+
+        &--active {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @include r($lg) {
+        &__pagination {
+            margin-bottom: 50px;
+        }
+    }
+}
+
+ul.product-shop__pagination--active {
+    justify-content: left;
+}
+
+.filter-button {
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+    z-index: 100;
+    display: none;
+    opacity: 1;
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: rgba(240, 240, 240, 0.7);
+    transition: opacity 0.5s;
+
+    svg {
+        width: 30px;
+        height: 100%;
+        fill: $blue80;
+    }
+
+    &--disable {
+        display: none;
+    }
+
+    @include r($lg) {
+        display: block;
+
+        &--disable {
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
+}

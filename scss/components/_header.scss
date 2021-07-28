@@ -20,7 +20,7 @@
     }
 
     &__logo {
-        margin-right: 170px;
+        margin-right: 155px;
 
         @include r($xl) {
             margin-right: 0;
@@ -28,7 +28,7 @@
     }
 
     &--sticky {
-        background-color: $pink50;
+        background-color: #fff3e9;
 
         .header__inner {
             padding: 20px 0;
@@ -177,7 +177,7 @@
 
     &__item {
         &:not(:last-child) {
-            margin-right: 35px;
+            margin-right: 26px;
 
             @include r($xl) {
                 margin-right: 15px;
@@ -237,6 +237,7 @@
     &__item {
         position: relative;
         margin-right: 20px;
+        padding-top: 1px;
         background-color: #edf1f4;
 
         path {
@@ -255,13 +256,13 @@
 
         &--like {
             margin-right: 0;
-            width: 90px;
+            width: 88px;
             border-radius: 22px 0 0 22px;
             background-color: $pink50;
         }
 
         &--basket {
-            width: 90px;
+            width: 88px;
             border-radius: 0 22px 22px 0;
             background-color: $pink50;
 

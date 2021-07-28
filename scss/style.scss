@@ -15,6 +15,40 @@
 @import "index/products";
 @import "index/design";
 
+// products
+
+@import "products/products";
+
+// about-us
+
+@import "about-us/about";
+@import "about-us/statistics";
+@import "about-us/team";
+
+// log-in
+
+@import "log-in/log-in";
+
+// blog-one
+
+@import "blog-one/blog-one";
+
+// terms
+
+@import "terms/terms";
+
+// product
+
+@import "product/product";
+
+// contact
+
+@import "contact/contact";
+
+//blog-list
+
+@import "blog-list/blog-list";
+@import "cards/blog-list-card";
 
 // components
 
@@ -23,15 +57,20 @@
 @import "cards/promo-card";
 @import "components/partners";
 @import "cards/article-card";
+@import "cards/recent-product";
 @import "components/articles";
+@import "components/pagination";
+@import "components/recent-products";
 @import "components/breadcrumbs";
 @import "components/header";
 @import "components/footer";
 @import "filters/mix-filter";
+@import "filters/filter-shop";
 @import "cards/design-card";
 @import "buttons/main-buttons";
 @import "buttons/clickable-area";
 @import "forms/subscribtion-form";
+@import "forms/contact-form";
 @import "cards/product-card";
 
 

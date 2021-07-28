@@ -1,0 +1,35 @@
+<article class="blog-article">
+    <div class="blog-article__box">
+        <img class="blog-article__image" src="images/articles/blog-list-@@number.jpeg" alt="article image">
+        <div class="blog-article__info">
+            <time class="blog-article__info-item" datatime="@@datetime">
+                <svg class="">
+                    <use xlink:href="images/sprite.svg#date"></use>
+                </svg>
+                28 january, 2020
+            </time>
+            <a class="blog-article__info-item blog-article__info-item--author link" href="#">
+                <svg class="">
+                    <use xlink:href="images/sprite.svg#user"></use>
+                </svg>
+                by admin
+            </a>
+        </div>
+    </div>
+    <a class="blog-article__content" href="#">
+        <h2 class="blog-article__title">
+            Fonsectetur adipisicing  eiusmod 
+        </h2>
+        <div class="blog-article__text">
+            <p>
+                consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+            </p>
+        </div>
+        @@include('../buttons/_buttons.html',{
+            "text": "View more",
+            "mod": "blog-article__button",
+            "svg": "arrow",
+            "type": "button--transparent"
+        })
+    </a>
+</article>

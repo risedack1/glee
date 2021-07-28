@@ -1,0 +1,34 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+
+    &__item {
+        border: 1px solid $blue20;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 14px;
+    }
+
+    &__link {
+        display: block;
+        padding: 17px 20px;
+        line-height: 1;
+        color: $blue80;
+        transition: background-color 0.3s;
+
+        &:hover:not(.pagination__link--active) {
+            background-color: $blue20;
+        }
+
+        &:active {
+            color: $bg;
+            background-color: $blue80;
+        }
+
+        &--active {
+            color: $bg;
+            background-color: $blue80;
+        }
+    }
+}

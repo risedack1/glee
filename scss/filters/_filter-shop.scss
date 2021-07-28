@@ -1,0 +1,247 @@
+.shop-filter {
+    width: 100%;
+    max-width: 270px;
+
+    @include r($lg) {
+        position: fixed;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.5s, width 0.5s;
+
+        &--active {
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 50;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            visibility: visible;
+            opacity: 1;
+            max-width: 100%;
+            background-color: rgba(36, 63, 77, 0.5);
+
+            .filter-shop {
+                margin: 0 auto;
+                padding: 20px;
+                height: 80vh;
+                max-width: 300px;
+                overflow-y: scroll;
+                border-radius: 5px;
+                background-color: $bg;
+            }
+        }
+    }
+}
+
+.filter-shop {
+    margin-bottom: 50px;
+    width: 100%;
+    max-width: 270px;
+
+    &__item {
+        margin-bottom: 56px;
+    }
+}
+
+.category {
+    &__title {
+        margin-bottom: 22px;
+    }
+
+    &__label {
+        display: flex;
+        cursor: pointer;
+    }
+
+    &__item {
+        @include line-clamp (1);
+
+        position: relative;
+        display: inline-block;
+        flex: 1 1 auto;
+        padding: 8px 20px 5px 15px;
+        border-radius: 5px;
+        color: $blue80;
+        transition: background-color 0.3s, color 0.3s;
+
+        &::after {
+            content: ">";
+            position: absolute;
+            right: 22px;
+            top: 50%;
+            font-size: 20px;
+            transform: translateY(-50%);
+        }
+
+        &:hover {
+            background-color: #edf1f4;
+        }
+    }
+
+    &__input {
+        opacity: 0;
+
+        &:checked + .category__item {
+            color: $bg;
+            background-color: $blue20;
+        }
+    }
+}
+
+.price {
+    margin-bottom: 80px;
+
+    &__title {
+        margin-bottom: 10px;
+    }
+
+    &__input {
+        margin-bottom: 20px;
+    }
+
+    &__cost {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        font-size: 14px;
+        line-height: 1.1;
+        color: $blue80;
+    }
+
+    .irs--flat {
+        height: 47px;
+    }
+
+    .irs-line,
+    .irs-bar {
+        height: 3px;
+        background-color: #dfe7ec;
+    }
+
+    .irs-min,
+    .irs-max {
+        display: none;
+    }
+
+    .irs-from,
+    .irs-to {
+        display: none;
+    }
+
+    .irs-bar {
+        background-color: $blue20;
+    }
+
+    .irs-handle {
+        top: 16px;
+        background-color: $blue20;
+        cursor: pointer;
+
+        i:first-child {
+            display: none;
+        }
+    }
+}
+
+.brand {
+    &__title {
+        margin-bottom: 30px;
+    }
+
+    &__label {
+        cursor: pointer;
+    }
+
+    &__box {
+        display: flex;
+        padding: 6px 25px 5px 15px;
+        border-radius: 5px;
+        color: $blue80;
+        transition: background-color 0.3s, color 0.3s;
+
+        &:hover {
+            background-color: #edf1f4;
+
+            &.brand__value {
+                color: $blue20;
+            }
+        }
+    }
+
+    &__value {
+        color: #b3b3b3;
+    }
+
+    &__item {
+        @include line-clamp (1);
+
+        flex: 1 1 auto;
+    }
+
+    &__input {
+        opacity: 0;
+
+        &:checked + .brand__box {
+            color: $bg;
+            background-color: $blue20;
+
+            .brand__value {
+                color: $bg;
+            }
+        }
+    }
+}
+
+.title-filters {
+    position: relative;
+    display: inline-block;
+    font-family: "DMSans", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    color: $blue80;
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: -15px;
+        top: 50%;
+        width: 36px;
+        height: 3px;
+        background-color: $blue20;
+        transform: translate(100%, -50%);
+    }
+}
+
+.search {
+    width: 100%;
+
+    &__form {
+        display: flex;
+    }
+
+    &__input {
+        flex: 1 1 auto;
+        border: 1px solid #edf1f4;
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        border: none;
+        background-color: #edf1f4;
+
+        svg {
+            width: 20px;
+            height: 20px;
+            fill: #094074;
+        }
+    }
+}

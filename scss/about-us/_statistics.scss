@@ -1,0 +1,71 @@
+.statistics {
+    padding: 85px 0;
+    background-color: $pink50;
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+
+        @include r($md) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 60px;
+        font-family: "DMSans", sans-serif;
+        font-weight: 700;
+        color: $blue80;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 70px;
+            height: 60px;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            transform: translateX(-50%);
+        }
+
+        &--rate::before {
+            background-image: url("../../images/sprite.svg#rate");
+        }
+
+        &--delivery::before {
+            background-image: url("../../images/sprite.svg#stat-delivery");
+        }
+
+        &--time::before {
+            background-image: url("../../images/sprite.svg#time");
+        }
+
+        &--brands::before {
+            background-image: url("../../images/sprite.svg#brands");
+        }
+
+        @include r($md) {
+            flex-basis: 50%;
+        }
+
+        @include r($sm) {
+            flex-basis: 100%;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__quantity {
+        font-size: 36px;
+    }
+
+    &__subtitle {
+        font-size: 18px;
+        line-height: 1.2;
+    }
+}

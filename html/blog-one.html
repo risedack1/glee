@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('./parts/_head.html',{
+"title": "Blog one"
+})
+
+<body>
+    @@include('./parts/components/_header.html')
+
+    <main class="main">
+        @@include('./parts/components/_breadcrumbs.html',{
+        "title": "Blog one",
+        "active-page": "Blog one"
+        })
+
+        <section class="blog-one">
+            <div class="container">
+                <div class="blog-one__content">
+                    <article class="blog-self">
+                        <div class="blog-self__box">
+                            <img class="blog-self__image" src="images/articles/blog-list-1.jpeg" alt="article image">
+                            <div class="blog-self__info">
+                                <time class="blog-self__info-item" datatime="@@datetime">
+                                    <svg class="">
+                                        <use xlink:href="images/sprite.svg#date"></use>
+                                    </svg>
+                                    28 january, 2020
+                                </time>
+                                <a class="blog-self__info-item blog-self__info-item--author link" href="#">
+                                    <svg>
+                                        <use xlink:href="images/sprite.svg#user"></use>
+                                    </svg>
+                                    by admin
+                                </a>
+                            </div>
+                        </div>
+                        <div class="blog-self__content" href="#">
+                            <h2>
+                                Fonsectetur adipisicing eiusmod
+                            </h2>
+                            <p class="blog-self__bolt">
+                                Sdipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                                enim ad minim venia Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                            </p>
+                            <p>
+                                consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                alLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            </p>
+                            <blockquote>
+                                Sdipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                <cite>
+                                    Wiusmod tempor
+                                </cite>
+                            </blockquote>
+                            <img class="blog-self__image-left" src="images/decor/video-popup.jpg" alt="">
+                            <h3>
+                                Riusmod tempor incididunt
+                            </h3>
+                            <p>
+                                consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                aliquip ex ea commodo
+                            </p>
+                            <h3>
+                                Kajtsal jervcm eoaspckred
+                            </h3>
+                            <p>
+                                consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                aliquip ex ea commodo
+                            </p>
+                        </div>
+                        <div class="blog-self__author author-info">
+                            <div class="author-info__box">
+                                <img class="author-info__img" src="images/team/comment.jpeg" alt="">
+                                <div class="author-info__desc">
+                                    <span class="author-info__name">
+                                        Mark N. Hernandez
+                                    </span>
+                                    <span class="author-info__profesion">
+                                        Designer
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="author-info__right">
+                                <div class="author-info__tags">
+                                    Tags: <a class="author-info__tag link" href="#">All</a>, <a
+                                        class="author-info__tag link" href="#">Trending</a>
+                                </div>
+                                <div class="author-info__social">
+                                    Share:
+                                    <a class="author-info__social-link" href="#">
+                                        <svg>
+                                            <use xlink:href="images/sprite.svg#facebook"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="author-info__social-link" href="#">
+                                        <svg>
+                                            <use xlink:href="images/sprite.svg#twitter"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="author-info__social-link" href="#">
+                                        <svg>
+                                            <use xlink:href="images/sprite.svg#instagram"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="author-info__social-link" href="#">
+                                        <svg>
+                                            <use xlink:href="images/sprite.svg#google"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <section class="blog-self__comments comments">
+                            <h2 class="comments__title">
+                                3 Comments
+                            </h2>
+                            <div class="comment">
+                                <div class="comment__box">
+                                    <img class="comment__img" src="images/team/comment1.jpeg" alt="">
+                                </div>
+                                <div class="comment__content">
+                                    <span class="comment__name">
+                                        Delores G. Roberts
+                                    </span>
+                                    <time class="comment__date" datetime="11.10.2020">
+                                        Add 11 Oct 2020
+                                    </time>
+                                    <div class="comment__text">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla
+                                            massa et tristique convallis. Class aptent taciti sociosqu ad litora
+                                            torquent per conubia nostra, per inceptos himenaeos. Suspendisse orci sem,
+                                            ultrices
+                                        </p>
+                                    </div>
+                                    <button class="comment__reply link" type="button" href="#">
+                                        Reply
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="comment  comment--reply">
+                                <div class="comment__box">
+                                    <img class="comment__img" src="images/team/comment2.jpeg" alt="">
+                                </div>
+                                <div class="comment__content">
+                                    <span class="comment__name">
+                                        Shannon S. Williams
+                                    </span>
+                                    <time class="comment__date" datetime="11.10.2020">
+                                        Add 11 Oct 2020
+                                    </time>
+                                    <div class="comment__text">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla
+                                            massa et tristique convallis. Class aptent taciti sociosqu ad litora
+                                            torquent per conubia nostra
+                                        </p>
+                                    </div>
+                                    <button class="comment__reply link" type="button" href="#">
+                                        Reply
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="comment">
+                                <div class="comment__box">
+                                    <img class="comment__img" src="images/team/comment1.jpeg" alt="">
+                                </div>
+                                <div class="comment__content">
+                                    <span class="comment__name">
+                                        Delores G. Roberts
+                                    </span>
+                                    <time class="comment__date" datetime="11.10.2020">
+                                        Add 11 Oct 2020
+                                    </time>
+                                    <div class="comment__text">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla
+                                            massa et tristique convallis. Class aptent taciti sociosqu ad litora
+                                            torquent per conubia nostra, per inceptos himenaeos. Suspendisse orci sem,
+                                            ultrices
+                                        </p>
+                                    </div>
+                                    <button class="comment__reply link" type="button" href="#">
+                                        Reply
+                                    </button>
+                                </div>
+                            </div>
+
+                        </section>
+
+                        <div class="blog-self__form">
+                            <h3 class="blog-self__form-title">
+                                Leave A Comment
+                            </h3>
+                            <form class="contact-form" action="#">
+                                <div class="contact-form__box">
+                                    <label class="contact-form__label contact__label--user">
+                                        <input class="contact-form__input" placeholder="name" type="text">
+                                    </label>
+                                    <label class="contact-form__label contact__label--message">
+                                        <input class="contact-form__input" placeholder="email" type="email">
+                                    </label>
+                                </div>
+                                <span class="contact-form__textbox">
+                                    <textarea class="contact-form__text" placeholder="comment"></textarea>
+                                </span>
+                                <button class="contact-form__button button" type="submit">
+                                    Post Comment
+                                </button>
+                            </form>
+                        </div>
+                    </article>
+                    <div class="filter-shop">
+                        <div class="filter-shop__item search">
+                            <form class="search__form" action="#">
+                                <input class="search__input" type="text">
+                                <button class="search__button" type="button">
+                                    <svg>
+                                        <use xlink:href="images/sprite.svg#search"></use>
+                                    </svg>
+                                </button>
+                            </form>
+                        </div>
+                        <div class="filter-shop__item category">
+                            <button class="category__title title-filters slide" type="button">category</button>
+                            <form class="category__form" action="#">
+                                <label class="category__label">
+                                    <input class="category__input sr-only" type="checkbox" name="chair">
+                                    <span class="category__item">Chair</span>
+                                </label>
+                                <label class="category__label">
+                                    <input class="category__input sr-only" type="checkbox" name="chair">
+                                    <span class="category__item">Table</span>
+                                </label>
+                                <label class="category__label">
+                                    <input class="category__input sr-only" type="checkbox" name="chair">
+                                    <span class="category__item">Lamp</span>
+                                </label>
+                                <label class="category__label">
+                                    <input class="category__input sr-only" type="checkbox" name="chair">
+                                    <span class="category__item">Watch</span>
+                                </label>
+                                <label class="category__label">
+                                    <input class="category__input sr-only" type="checkbox" name="chair">
+                                    <span class="category__item">Clock</span>
+                                </label>
+                            </form>
+                        </div>
+                        <div class="recent-posts">
+                            <button class="recent-posts__title title-filters slide" type="button">
+                                Recent Posts
+                            </button>
+                            <ul class="recent-posts__list">
+                                <li class="recent-posts__item">
+                                    <article class="recent-post link">
+                                        <div class="recent-post__inner">
+                                            <div class="recent-post__box">
+                                                <img class="recent-post__image" src="images/articles/blog-list-1.jpeg"
+                                                    alt="recent-post image">
+                                            </div>
+                                            <a class="recent-post__content" href="#">
+                                                <h3 class="recent-post__title">
+                                                    Corem ipsum dolor tetur adipisicing elit
+                                                </h3>
+                                                <time class="recent-post__date" datatime="@@datetime">
+                                                    <svg class="">
+                                                        <use xlink:href="images/sprite.svg#date"></use>
+                                                    </svg>
+                                                    28 january, 2020
+                                                </time>
+                                            </a>
+                                        </div>
+                                    </article>
+                                </li>
+                                <li class="recent-posts__item">
+                                    <article class="recent-post link">
+                                        <div class="recent-post__inner">
+                                            <div class="recent-post__box">
+                                                <img class="recent-post__image" src="images/articles/blog-list-2.jpeg"
+                                                    alt="recent-post image">
+                                            </div>
+                                            <a class="recent-post__content" href="#">
+                                                <h3 class="recent-post__title">
+                                                    Corem ipsum dolor tetur adipisicing elit
+                                                </h3>
+                                                <time class="recent-post__date" datatime="@@datetime">
+                                                    <svg class="">
+                                                        <use xlink:href="images/sprite.svg#date"></use>
+                                                    </svg>
+                                                    28 january, 2020
+                                                </time>
+                                            </a>
+                                        </div>
+                                    </article>
+                                </li>
+                                <li class="recent-posts__item">
+                                    <article class="recent-post link">
+                                        <div class="recent-post__inner">
+                                            <div class="recent-post__box">
+                                                <img class="recent-post__image" src="images/articles/blog-list-3.jpeg"
+                                                    alt="recent-post image">
+                                            </div>
+                                            <a class="recent-post__content" href="#">
+                                                <h3 class="recent-post__title">
+                                                    Corem ipsum dolor tetur adipisicing elit
+                                                </h3>
+                                                <time class="recent-post__date" datatime="@@datetime">
+                                                    <svg class="">
+                                                        <use xlink:href="images/sprite.svg#date"></use>
+                                                    </svg>
+                                                    28 january, 2020
+                                                </time>
+                                            </a>
+                                        </div>
+                                    </article>
+                                </li>
+                                <li class="recent-posts__item">
+                                    <article class="recent-post link">
+                                        <div class="recent-post__inner">
+                                            <div class="recent-post__box">
+                                                <img class="recent-post__image" src="images/articles/blog-list-4.jpeg"
+                                                    alt="recent-post image">
+                                            </div>
+                                            <a class="recent-post__content" href="#">
+                                                <h3 class="recent-post__title">
+                                                    Corem ipsum dolor tetur adipisicing elit
+                                                </h3>
+                                                <time class="recent-post__date" datatime="@@datetime">
+                                                    <svg class="">
+                                                        <use xlink:href="images/sprite.svg#date"></use>
+                                                    </svg>
+                                                    28 january, 2020
+                                                </time>
+                                            </a>
+                                        </div>
+                                    </article>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        @@include('./parts/components/_partners.html')
+    </main>
+
+    @@include('./parts/components/_footer.html')
+
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>
