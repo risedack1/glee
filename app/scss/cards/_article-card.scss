@@ -7,7 +7,6 @@
 
     &__info {
         position: relative;
-        margin-right: 30px;
         padding-left: 20px;
 
         &::before {
@@ -100,6 +99,7 @@
     &__bottom {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         padding: 22px 0 27px;
         border-top: 1px solid #e0e0e0;
         font-size: 12px;

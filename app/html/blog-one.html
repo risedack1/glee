@@ -203,14 +203,20 @@
                             <form class="contact-form" action="#">
                                 <div class="contact-form__box">
                                     <label class="contact-form__label contact__label--user">
-                                        <input class="contact-form__input" placeholder="name" type="text">
+                                        <span class="sr-only">
+                                            Enter your email
+                                        </span>
+                                        <input class="contact-form__input" name="User name" placeholder="name" type="text" required>
                                     </label>
                                     <label class="contact-form__label contact__label--message">
-                                        <input class="contact-form__input" placeholder="email" type="email">
+                                        <span class="sr-only">
+                                            Enter your password
+                                        </span>
+                                        <input class="contact-form__input" name="User email" placeholder="email" type="email" required>
                                     </label>
                                 </div>
                                 <span class="contact-form__textbox">
-                                    <textarea class="contact-form__text" placeholder="comment"></textarea>
+                                    <textarea class="contact-form__text" name="comment" placeholder="comment"></textarea>
                                 </span>
                                 <button class="contact-form__button button" type="submit">
                                     Post Comment
@@ -221,7 +227,7 @@
                     <div class="filter-shop">
                         <div class="filter-shop__item search">
                             <form class="search__form" action="#">
-                                <input class="search__input" type="text">
+                                <input class="search__input" type="text" required>
                                 <button class="search__button" type="button">
                                     <svg>
                                         <use xlink:href="images/sprite.svg#search"></use>
