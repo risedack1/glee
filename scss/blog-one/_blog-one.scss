@@ -136,6 +136,10 @@
         }
     }
 
+    &__bolt {
+        font-weight: 500;
+    }
+
     &__content {
         margin-bottom: 67px;
 
@@ -147,10 +151,6 @@
             @include r($md) {
                 font-size: 30px;
             }
-        }
-
-        &__bolt {
-            font-weight: 500;
         }
 
         p {

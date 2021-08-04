@@ -14,40 +14,40 @@
     <div class="container container--lg">
         <div class="header__inner">
             <nav class="menu">
-                <a class="logo header__logo" href="#">
-                    <img class="logo__image" src="images/icons/logo.png" alt="logo Glee">
+                <a class="logo header__logo" href="./index.html">
+                    <img class="logo__image" width="150" src="images/icons/logo.png" alt="logo Glee">
                 </a>
-                <button class="burger">
+                <button class="burger" type="button">
                     <span class="burger__line"></span>
                 </button>
                 <ul class="menu__list">
                     <li class="menu__item">
-                        <a class="menu__link menu__link--active link clickable" href="#">
+                        <a class="menu__link menu__link--active link clickable" href="./index.html">
                             Home +
                         </a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link link clickable" href="#">
+                        <a class="menu__link link clickable" href="./about_us.html">
                             About
                         </a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link link clickable" href="#">
+                        <a class="menu__link link clickable" href="./products.html">
                             Services
                         </a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link link clickable" href="#">
+                        <a class="menu__link link clickable" href="./products.html">
                             Pages +
                         </a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link link clickable" href="#">
+                        <a class="menu__link link clickable" href="./blog-list.html">
                             News
                         </a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link link clickable" href="#">
+                        <a class="menu__link link clickable" href="./contact.html">
                             Contacts
                         </a>
                     </li>
@@ -60,14 +60,14 @@
                             <use xlink:href="images/sprite.svg#search"></use>
                         </svg>
                     </button>
-                    <a class="circle-btn user-icons__item user-icons__item--like" href="#" type="button">
+                    <a class="circle-btn user-icons__item user-icons__item--like" href="./log-in.html">
                         <span class="sr-only">Go to likes</span>
                         <svg>
                             <use xlink:href="images/sprite.svg#like"></use>
                         </svg>
                         <span class="user-icons__num">0</span>
                     </a>
-                    <a class="circle-btn user-icons__item user-icons__item--basket" href="#" type="button">
+                    <a class="circle-btn user-icons__item user-icons__item--basket" href="./log-in.html">
                         <span class="sr-only">Go to basket</span>
                         <svg>
                             <use xlink:href="images/sprite.svg#basket"></use>
@@ -101,20 +101,20 @@
 
         <section class="log-in">
             <form class="log-in__form" action="#">
-                <span class="log-in__text">
+                <label class="log-in__text" for="log-in__input">
                     Username or email address *
-                </span>
-                <input class="log-in__input" type="text">
-                <span class="log-in__text">
+                </label>
+                <input class="log-in__input" id="log-in__input" type="text" required>
+                <label class="log-in__text" for="log-in__pass">
                     Password *
-                </span>
-                <input class="log-in__input" type="password">
+                </label>
+                <input class="log-in__input" id="log-in__pass" type="password" required>
                 <button class="log-in__button button" type="submit">
                     Login
                 </button>
                 <div class="log-in__info">
                     <label class="log-in__label link">
-                        <input class="log-in__checkbox-hidden sr-only" type="checkbox">
+                        <input class="log-in__checkbox-hidden sr-only" type="checkbox" checked>
                         <span class="log-in__checkbox"></span>
                         Remember me
                     </label>
@@ -166,7 +166,7 @@
         <div class="footer__top">
             <div class="footer__column">
                 <a class="logo footer__logo" href="#">
-                    <img class="logo__image" src="images/icons/logo.svg" alt="logo Glee">
+                    <img class="logo__image" src="images/icons/logo.png" alt="logo Glee">
                 </a>
                 <address class="footer__contacts">
                     <span class="footer__contact">

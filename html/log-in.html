@@ -15,20 +15,20 @@
 
         <section class="log-in">
             <form class="log-in__form" action="#">
-                <span class="log-in__text">
+                <label class="log-in__text" for="log-in__input">
                     Username or email address *
-                </span>
-                <input class="log-in__input" type="text">
-                <span class="log-in__text">
+                </label>
+                <input class="log-in__input" id="log-in__input" type="text" required>
+                <label class="log-in__text" for="log-in__pass">
                     Password *
-                </span>
-                <input class="log-in__input" type="password">
+                </label>
+                <input class="log-in__input" id="log-in__pass" type="password" required>
                 <button class="log-in__button button" type="submit">
                     Login
                 </button>
                 <div class="log-in__info">
                     <label class="log-in__label link">
-                        <input class="log-in__checkbox-hidden sr-only" type="checkbox">
+                        <input class="log-in__checkbox-hidden sr-only" type="checkbox" checked>
                         <span class="log-in__checkbox"></span>
                         Remember me
                     </label>
